@@ -255,7 +255,7 @@ We provide a standard GP search algorithm with the capabilities for co-evolution
 
 The GP uses [reflection](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection) to find user-defined GP operators, which are then used in the search algorithm to generate individuals.
 
-In addition, the user must provide a probability distribution for the different GP operators. This probability distribution is used by the GP search algorithm to randomly generate individuals. See [here](#gpexperimentprefab--a-name--gpexperimentprefabparameters--) for more information.
+In addition, the user must provide a probability distribution for the different GP operators. This probability distribution is used by the GP search algorithm to randomly generate individuals. See [here](#gpexperimentprefab) for more information.
 
 Lastly, ABL-Unity3D provides the option to use multiple different population initialization methods. By default, random and ramped initialization are included. The user can create their own.
 
