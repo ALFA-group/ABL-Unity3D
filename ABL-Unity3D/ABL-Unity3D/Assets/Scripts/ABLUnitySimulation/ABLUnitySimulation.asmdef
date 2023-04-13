@@ -1,0 +1,18 @@
+{
+  "name": "ABLUnitySimulation",
+  "rootNamespace": "",
+  "references": [
+    "GUID:6172737ba31e460d995c21c5fd32a9b0",
+    "GUID:47b16c9b844640bcb8626068ec028aac",
+    "GUID:efa45043feb7e4147a305b73b5cea642"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Using Lines indexer</title>
+  <meta name="description" content="Linefy Documentation - Using Lines indexer">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../flavicon/favicon-16x16.png">
+  <link rel="manifest" href="../flavicon//site.webmanifest">
+  <link rel="mask-icon" href="../flavicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+ 
+<body>
+<div>
+	<h4 id="Classes"> <a href=../linefy-documentation.html>Linefy Documentation</a> / Using Lines indexer  </h4>
+<div class="codePre">
+ <pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">UnityEngine</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">Linefy</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+    <span style="color: #008000;">&#91;</span>ExecuteInEditMode<span style="color: #008000;">&#93;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> QuickStart_CreateLines <span style="color: #008000;">:</span> MonoBehaviour <span style="color: #008000;">&#123;</span>
+        Lines lines<span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #6666cc; font-weight: bold;">void</span> Update<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>lines <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                lines <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Lines<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">2</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                <span style="color: #008080; font-style: italic;">//assign lines</span>
+                lines<span style="color: #008000;">&#91;</span><span style="color: #FF0000;">0</span><span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Line<span style="color: #008000;">&#40;</span>Vector3<span style="color: #008000;">.</span><span style="color: #0000FF;">zero</span>, <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span>, <span style="color: #FF0000;">1</span>, <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span>, Color<span style="color: #008000;">.</span><span style="color: #0000FF;">red</span>, Color<span style="color: #008000;">.</span><span style="color: #0000FF;">yellow</span>, <span style="color: #FF0000;">20</span>, <span style="color: #FF0000;">20</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                lines<span style="color: #008000;">&#91;</span><span style="color: #FF0000;">1</span><span style="color: #008000;">&#93;</span> <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Line<span style="color: #008000;">&#40;</span>Vector3<span style="color: #008000;">.</span><span style="color: #0000FF;">up</span>, Vector3<span style="color: #008000;">.</span><span style="color: #0000FF;">right</span>, Color<span style="color: #008000;">.</span><span style="color: #0000FF;">green</span>, Color<span style="color: #008000;">.</span><span style="color: #0000FF;">cyan</span>, <span style="color: #FF0000;">20</span>, <span style="color: #FF0000;">20</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            <span style="color: #008080; font-style: italic;">//actually draw a lines</span>
+            lines<span style="color: #008000;">.</span><span style="color: #0000FF;">Draw</span><span style="color: #008000;">&#40;</span>transform<span style="color: #008000;">.</span><span style="color: #0000FF;">localToWorldMatrix</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;</pre>
+</div>
+
+ 		<img src="lines-snippet-0.xpng">
+
+        <footer>
+             <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+        </footer>
+</div>
+</body>
+</html>

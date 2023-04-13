@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8684586299200626755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: armorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1eb866ec7d062f04385bfeff25cf8429, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: humanSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a214b419b0a9a54c8f5ace4216da48a, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeASprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a45c9915d44a86e42aab8ae2a355f497, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeBSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf9151e1ce60c6345ba721187642dc43, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeCSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de110796f0df83d429a4a76cb6736912, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeDSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea6295b453f91294a91710f94b3825f1, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: vehicleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 194fe7a9e69a29d41a2a95c3f17e121e, type: 3}
+    - target: {fileID: 182326764881429100, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: showObservedPosition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678130, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_Name
+      value: RedPlatoon Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678130, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_TagString
+      value: RedTeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678134, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9a167e277623484d850e9035e6b0cd9, type: 2}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114049342414678136, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835843977219364422, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: extraHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: armorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1eb866ec7d062f04385bfeff25cf8429, type: 3}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: humanSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a214b419b0a9a54c8f5ace4216da48a, type: 3}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeASprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a45c9915d44a86e42aab8ae2a355f497, type: 3}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeBSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf9151e1ce60c6345ba721187642dc43, type: 3}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeCSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de110796f0df83d429a4a76cb6736912, type: 3}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: typeDSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea6295b453f91294a91710f94b3825f1, type: 3}
+    - target: {fileID: 2715556311339101727, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}
+      propertyPath: vehicleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 194fe7a9e69a29d41a2a95c3f17e121e, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd3764c824ba49e40a69047d393bd4d0, type: 3}

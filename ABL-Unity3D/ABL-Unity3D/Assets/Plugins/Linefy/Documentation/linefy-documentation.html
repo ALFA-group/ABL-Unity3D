@@ -1,0 +1,1510 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linefy Documentation</title>
+  <meta name="description" content="Linefy Documentation">
+  <link rel="stylesheet" href="content/styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="flavicon/favicon-16x16.png">
+  <link rel="manifest" href="flavicon/site.webmanifest">
+  <link rel="mask-icon" href="flavicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+ </head>
+
+<body>
+ <div class ="toc0">
+
+	<div class ="toc1">
+		<div class="toc2">
+		 	<a href=http://u3d.as/1NPS> <img class ="logoImg" src="content/linefy-logo-transparent.xpng"> </a>
+			<ul>
+				<li><a href="#Overview">Overview</a></li>
+				<hr>	
+				<li><a href="#Guide">Guide</a> 
+					<ul>
+						<li><a href="#BasicConcept">Basic concept</a> </li>
+ 						<li><a href="#Drawing ">Drawing</a> 
+							<ul>  
+								<li><a href="#DrawInRuntime">Runtime</a> </li>
+								<ul> 
+									<li><a href="#DrawInRuntimeUI">Runtime UI</a> </li>
+								</ul>
+								<li><a href="#DrawInSceneView">Scene view</a> </li>
+								<li><a href="#DrawGizmos">Gizmos</a> </li>
+								<li><a href="#DrawInInspector">Inspector</a> </li>
+								<li><a href="#DrawInEditorWindow">EditorWindow</a> </li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				
+				<hr>	
+				
+				<li><a href="#RuntimeClasses">Runtime Classes</a> 
+					<ul>
+						<li> <a href="#Drawable">Drawable</a> 
+							<ul>
+								<li> <a href="#LinefyDrawcall">LinefyDrawcall </a> 
+									<ul>
+										<li> <a href="#PolygonalMesh">PolygonalMesh </a> </li>
+										<li> <a href="#PrimitivesGroup">PrimitivesGroup</a> 
+											<ul>
+												<li> <a href="#Dots">Dots </a> </li>
+												<li> <a href="#LinesBase">LinesBase </a> 
+													<ul>
+														<li> <a href="#Lines">Lines </a> </li>
+														<li> <a href="#Polyline">Polyline </a> </li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+
+									</ul>
+								</li>
+								<li> <a href="#LabelsRenderer">LabelsRenderer </a> </li>
+								<li> <a href="#Primitives">Primitives </a> </li>
+							</ul>
+						</li> 
+					</ul> 
+				</li>
+
+				<hr>	
+
+				<li><a href="#EditorClasses">Editor Classes</a> 
+						
+					<ul>
+						<li><a href="#OnSceneGUIGraphics">OnSceneGUIGraphics</a> </li>
+						<li><a href="#EditorGUIViewport">EditorGUIViewport</a> </li>
+						<li> <a href="#EditorHandles">Handles</a> </li>
+							<ul>
+								<li> <a href="#Vector3Handle">Vector3Handle</a> </li>
+								<li> <a href="#Matrix4x4Handle">Matrix4x4Handle</a> </li>
+								<li> <a href="#Vector3ArrayHandle">Vector3ArrayHandle</a> </li>
+
+							</ul>
+ 					</ul>
+				</li>
+				
+				<hr>	
+				
+				<li><a href="#Assets">Assets</a> 
+					<ul>
+						<li> <a href="#DotsAtlas">DotsAtlas</a> </li>
+						<li> <a href="#PolygonalMeshAsset">PolygonalMeshAsset</a> </li>
+						<li> <a href="#SerializedPolygonalMesh">SerializedPolygonalMesh</a> </li>
+ 					</ul>
+				</li>
+				
+				<hr>	
+				
+				
+				<li><a href="#Components">Components</a> 
+					<ul>
+						<li> <a href="#PolygonalMeshRenderer">PolygonalMeshRenderer</a> </li>
+ 						<li> <a href="#NearClipPlaneMatrix">NearClipPlaneMatrix</a> </li>
+						<li> <a href="#LinefyRectTransform">LinefyRectTransform</a> </li>
+					</ul>
+				</li>
+				
+				<hr>
+										
+				<li><a href="#Structures">Structures</a> 
+					<ul>
+						<li> <a href="#Polygon">Polygon</a> </li>
+						<li> <a href="#PolygonCorner">PolygonCorner</a> </li>
+						<li> <a href="#Label">Label</a> </li>
+						<li> <a href="#Dot">Dot</a> </li>
+						<li> <a href="#Line">Line</a> </li>
+						<li> <a href="#PolylineVertex">PolylineVertex</a> </li>
+ 					</ul>
+				</li>
+				
+				<hr>
+				
+				<li><a href="#Enumerations">Enumerations</a> 
+					<ul>
+						<li> <a href="#WidthMode">WidthMode</a> </li>
+						<li> <a href="#LightingMode">LightingMode</a> </li>
+						<li> <a href="#NormalsRecalculationMode">NormalsRecalculationMode</a> </li>
+ 					</ul>
+				</li>
+
+				<hr>	
+
+
+			</ul>
+		
+		</div>
+	</div>
+ </div>
+
+<div class ="content">
+	<div>
+		<h3 id="Overview">  Overview   </h3>
+		<p> 
+			<a href="http://u3d.as/1NPS">Linefy</a> is a versatile, cross-platform, GPU-powered graphics library for 
+			drawing colored, textured lines, polylines, points and meshes in screen and world spaces. 
+		</p>
+		
+		<div>
+			<h4 id="features">Features</h4>
+			<ul>
+				<li>Draw everywhere: Runtime, Scene view, Gizmos, inside Inspectors and Editor windows</li>
+				<li>Fastest dynamic drawing with zero allocations.</li>
+				<li>Lighting-fast static drawing with zero CPU usage.</li>
+				<li>Cross-platform: mobile, WebGL, VR.</li>
+				<li>Render-pipeline independent.</li>
+				<li>PostProcessing is supported.</li>
+				<li>Per-vertex adjustable: colors, width, texture coordinates.</li>
+				<li>Antialiasing without Multisampling and post-effects.</li>
+				<li>Import polygonal meshes with quad wireframe.</li>
+				<li>Custom Matrix4x4 and Vector3 handles.</li>
+				<li>Pixel Perfect Bitmap Fonts rendering.</li>
+				<li>Clear and simple API. Full C# code included.</li>
+				<li>No dependencies</li>
+				<li>Over 15 demo scenes included.</li>
+			</ul>
+		</div>
+		
+		<div>
+		<h4>Demo</h4>
+			<ul>
+				<li> <a href="https://polyflow.xyz/content/linefy/web-gl-1-1/">WebGL</a> </li>
+				<li> <a href="https://drive.google.com/file/d/147pAuLEnmV7u6jpZxh8d19e2cnNqfYCN/view?usp=sharing">Android</a> </li>
+				<li> <a href="https://drive.google.com/file/d/1Rqn1KL2KYPdMX5i7g3UK8f0ML42nwT1g/view?usp=sharing">Windows</a> </li>
+			</ul>
+		</div>
+		
+		<div>
+		<h4>Compatibility</h4>
+			<ul>
+				<li>
+				 Unity 2017.4 or newer (tested with 2018, 2019, 2020, 2021) 
+				</li>
+			</ul>
+		</div>
+		
+		<div>
+			<h4>What`s new in version 1.1</h4>
+				<ul>
+				<li>
+				Text renderering using LabelsRender class and LinefyLabelsRenderer component.
+				</li>
+				
+				<li>
+				Polyline: huge performance improvement.
+				</li>
+				
+				<li>
+				DotsAtlas: 1) added options for use as a bitmap font, 2) adjustable preview area appearance which drawn with Linefy itself. .
+				</li>
+				
+				<li>
+				Dots: 1) added non quad Dot support 2) added dot local offset 3) Pixel Perfect mode 
+				</li>
+				
+				<li>
+				Added three additional algorithms for calculating the elements width . An early algorithm introduced in 1.0 is now is called PixielBillboard.
+				</li>
+				
+				<li>
+				Now used quadrilateral UV interpolation to Lines and Polyline that projects texture and colors without distortion.
+				</li>
+				
+				<li>
+				Vector3Array handle. An editor class to mass manipulate array of positions in SceneView.
+				</li>
+				
+				<li>
+				Added EditablePolyline, EditableLine, EditableDots components that serialize polyline, lines and points, respectively, and allow you to edit their position in the Scene view mode.
+				</li>
+				
+				<li>
+				Added ready to use WYSIWYG primitives.
+				</li>
+				
+				<li>
+				Advansed serialization for Lines,Polyline, Dots. Now each class has its own serialized representation, which can be stored in a MonoBehaviour or ScriptableObject object. It can also be used to display all the properties of the object in the inspector. 
+				</li>
+				
+				<li>
+				Added ZTest property
+				</li>
+				
+				<li>
+				Now drawing in OnDrawGizmos() OnDrawGizmosSelected() is supported.
+				</li>
+				
+				<li>
+				Now drawing in Editor.OnInspectorGUI() EditorWindow.OnGUI() is supported.
+				</li>
+				
+				<li>
+				Remastered Demo scenes and Documentation 
+				</li>
+				
+				<li>
+				Tested with Unity 2019, 2020, 2021  
+				</li>
+			</ul>
+		</div>
+	
+		<div>
+			<h4>Limitations</h4>
+			<ul>
+				<li> Lines, Polylines, Dots uses internal unlit shaders and cannot be replaced with custom shaders.</li>
+				<li> Linefy is primarily a scripting library. Basic C # scripting skills are required to utilize all features.</li>
+			</ul>
+		</div>
+		
+		<div>
+			<h4>Known Issues</h4>
+			<ul>
+				<li>  The exception <a href=https://issuetracker.unity3d.com/issues/cycling-between-objects-with-custom-editor-scripts-materials-results-in-errors-and-glitched-inspector-window>Preview scene could not be created </a> 
+				is thrown after repeatedly switching between inspectors which use EditorGUIViewport. To fix re-open Unity Editor. </li>
+				<li> In a Unity version earlier of 2018.4, the serialization of PolygonalMeshAsset created in later versions may be broken. To fix this issue recreate PolygonalMeshAsset in your current version</li>
+			</ul>
+		</div>
+		
+		<div>
+		<h4>Aditional downloads</h4>
+			<ul>
+				<li> <a href="https://drive.google.com/drive/folders/1OR-4YYrd5_FJhZLRLGSXapO32Z9QfsEv?usp=sharing">example .obj files </a> </li>
+ 
+			</ul>
+		</div>
+	
+	</div>
+	
+	<hr>
+	
+<!--Call drawing methods -->	
+	<div>
+		<h3 id="Guide"> Guide</h3>
+		<p> 
+			This guide lists important aspects of working with the library. For a quick start, you can skip this documentation and use the numerous examples provided with the package.
+		</p> 
+		
+		<div>
+			<h4 id="BasicConcept"> Basic concept</h4>
+			<p> 
+				There are two way to use Linefy:
+				<ol>
+					<li> Use  components derived from <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>MonoBehaviour</a> (Runtime only)  
+						<ul>
+							<li> <a href=#Primitives>Primitives</a></li>
+							<li> EditableLine, EditablePolyline, EditableDots </a></li>
+							<li> <a href=#LinefyLabelsRenderer>LinefyLabelRenderer</a></li>
+							<li> <a href=#PolygonalMeshRenderer>PolygonalMeshRender</a></li>
+						</ul>
+					</li>
+					<li> Completely by code ( Runtime, Editor) 
+						<ul>
+							<li> <a href=#Primitives>Primitives</a></li>
+							<li> <a href = #Lines>Lines</a>, <a href = #Polyline>  Polyline</a>, <a href = #Dots>Dots</a></li>
+							<li> <a href=#LabelsRenderer>LabelRenderer</a></li>
+							<li> <a href=#PolygonalMesh >PolygonalMesh </a></li>
+							<li> <a href=#EditorHandles >Editor handles </a></li>
+						</ul>
+					</li>
+ 				</ol>
+				<p> The core of Linefy code is based on the <a href=#https://en.wikipedia.org/wiki/Object-oriented_programming>OOP principles</a>, for rendering used <a href=#https://en.wikipedia.org/wiki/Retained_mode>Retained Mode</a>. 
+				All drawable objects is inherited from <a  href=#Drawable>Drawable</a>.				
+				The life cycle of a <a  href=#Drawable>Drawable</a> object has four stages: </p>
+				<ol>
+					<li> Create using constructor  <small> Drawable</small> <em>foo</em> = <small>new</small> <b>Drawable()</b>;    </li>
+					<li> Assign properties (if needed): colors, widths, positions itc.   </li>
+					<li> Call <a href=#Drawing>drawing</a> method every frame which object should displayed.</li>
+					<li> Dispose (if needed)  <em> foo</em>.<b>Dispose()</b>;  </li>
+ 				</ol>
+ 
+			</p> 
+		</div>
+		
+		<hr>
+
+	</div>
+	
+		
+<!--Call drawing methods -->
+	<div>
+		<h3 id="Drawing">Drawing</h3>
+		<p> 
+			There are different drawing techniques for certain purpose.
+		</p> 
+		
+		<div>
+			<h4 id="DrawInRuntime"> Runtime</h4>
+			<p>Drawing at runtime has to be performed using <a href="#DrawableDraw">Drawable.Draw()</a> method within the  <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>Update()</a>  or  <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>LateUpdate()</a> functions.</p>
+			<ul>
+				<li> To draw in given camera screen space use matrix that calculated by <a href = #NearClipPlaneMatrix>NearClipPlaneMatrix</a> </li>
+				<li> To draw when Play Mode is off use <small>[ExecuteInEditMode]</small> in parent component. </li>
+				<li> When Unity loads a new level, all objects of the old one are destroyed automatically, so there is no need to call <a href=#DrawableDispose> Drawable.Dispose()</a> at the end of game, but only if you need to destroy the Drawable during gameplay.</li>
+			</ul>
+ 			<p class="example" ><a href="content/examples-draw-at-runtime.html"> Example </a></p>	
+ 			<hr class="palehr">
+		</div>
+		
+		<div>
+			<h4 id="DrawInRuntimeUI">Draw in UI</h4>
+			<p class="warning">Only a Canvas.renderMode <a href=https://docs.unity3d.com/ScriptReference/RenderMode.ScreenSpaceCamera.html>ScreenSpaceCamera</a> and <a href=https://docs.unity3d.com/ScriptReference/RenderMode.WorldSpace.html>WorldSpace</a> is supported </p>
+
+			<p> Drawing in <a href=https://docs.unity3d.com/ScriptReference/Canvas.html>Canvas</a> is a subset of drawing at runtime, but requires a custom transformation matrix bound to the <a href=https://docs.unity3d.com/ScriptReference/RectTransform.html>RectTransform</a>.
+			To get matrix that anchored to <a href=https://docs.unity3d.com/ScriptReference/RectTransform.html>RectTransform</a> use one of this options: </p>
+			<ul>
+				<li> use one of these extension methods 
+					<ul>
+						<li><small>Matrix4x4 RectTransform.</small><b>GetCenteredWorldMatrix()</b> </li>
+						<li><small>Matrix4x4  RectTransform.</small><b>GetWorldMatrix()</b> </li>
+					</ul>
+				</li>
+				<li> Use component <a href=#LinefyRectTransform>LinefyRectTransform</a> </li>
+			</ul>
+			<p class="example" ><a   href="content/examples-draw-at-runtime-ui.html"> Example </a> </p>
+			<hr class="palehr">
+		</div>
+		
+		<div>
+			<h4 id="DrawInSceneView"> Scene view</h4>
+			<p>Drawing in Scene view has to be performed using <a href="#OnSceneGUIGraphics"> OnSceneGUIGraphics</a> in editor scripts within the  <a href=https://docs.unity3d.com/ScriptReference/Editor.OnSceneGUI.html> OnSceneGUI() </a> function. </p>
+ 			<p class="example" ><a  href="content/examples-draw-in-scene-view.html"> Example </a> </p>
+			<hr class="palehr">
+		</div>
+		
+		<div>
+			<h4 id="DrawGizmos">Gizmos</h4>
+			<p>Drawing gizmos has to be performed using <a href=#LinefyEntityDrawNow>Drawable.DrawNow()</a> method in <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmos.html> OnDrawGizmos()</a> or <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html>OnDrawGizmosSelected()</a> </p>
+ 			<p class="example" ><a  href="content/examples-draw-gizmos.html"> Example </a> </p>
+ 			<hr class="palehr">
+		</div>
+		
+		
+		<div>
+			<h4 id="DrawInInspector"> Inspector </h4>
+			<p>Drawing in Inspector has to be performed using <a href="#EditorGUIViewport"> EditorGUIViewport</a> in editor scripts within the  <a href=https://docs.unity3d.com/ScriptReference/Editor.OnInspectorGUI.html> OnInspectorGUI() </a> </p> function.
+ 
+			<p class="example" ><a  href="content/examples-draw-in-inspector.html"> Example </a> </p>
+			<hr class="palehr">
+		</div>
+		
+		<div>
+			<h4 id="DrawInEditorWindow"> Editor Window </h4>
+			<p>Drawing in EditorWindow has to be performed using <a href="#EditorGUIViewport"> EditorGUIViewport</a> in editor scripts within the  <a href=https://docs.unity3d.com/ScriptReference/EditorWindow.OnGUI.html> OnGUI() </a> </p> function.
+ 			<p class="example" ><a  href="content/examples-draw-in-editor-window.html"> Example </a> </p>
+ 
+		</div>
+	</div>
+
+	<hr>
+	
+<!-- Classes -->	
+	<div>
+		<h3 id="RuntimeClasses">  Classes   </h3>
+		<p> Here described runtime classes hierarchy. </p>
+		
+		<!-- Drawable -->	
+		<div>
+			<h4 id="Drawable">  <b>Drawable</b>   <small> namespace:Linefy </small>  </h4>
+			<p> An base class for all drawable objects</p>
+			<div class="method" id="DrawableDraw">
+				<p class="methodString">  <small>void</small> <b>Draw(</b>  <small>Matrix4x4</small> <em>matrix</em> , <small>Camera</small> <em>camera</em>, <small>int</small> <em>layer</em> <b>)</b> </p>
+					<p>  Actually sends objects to render. Use inside <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>Update</a> or <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>LateUpdate</a>  only.  </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>matrix</em> - world space matrix. To calculate the screen space matrix of a specific camera, use the <a href=#NearClipPlaneMatrix>NearClipPlaneMatrix</a>  </li>
+					<li> <em>camera</em> - if  <small>null</small>  , the mesh will be drawn in all cameras. Otherwise it will be rendered in the given camera only. </li>
+					<li> <em>layer</em> - layer to use.</li>
+				</ul>
+ 
+			</div>
+			
+			<div class="method" id="DrawableDrawNow">
+				<p class="methodString"> <small>void</small> <b>DrawNow(</b>   <small>Matrix4x4</small> <em>matrix</em>  <b>)</b> </p>
+					 <p> Use inside <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmos.html>OnDrawGizmos</a> or <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html>OnDrawGizmosSelected</a>  only. </p>
+				<ul class = "clearlist">
+					<li> <em>matrix</em> - An world space matrix. </li> 
+				</ul>
+			</div>
+			
+			<div class="method" id="DrawableDispose">
+				<p class="methodString"> <small>void</small> <b>Dispose()</b> </p>
+					<p> Destroys all internal unmanaged Objects. The main purpose is to use it in the editor scripts; in Game mode, objects are deleted automatically when a new level is loaded. </p>
+			</div>
+		
+			<div class="method" id="DrawableDisposed">
+				<p class="methodString"> <small>bool</small> <b>disposed</b> </p>
+				   <p> Returns true when the instance is disposed. You should not call any methods on a disposed instance. </p>
+			</div>
+		</div>	
+		
+		<hr class="palehr">
+		<!-- Linefy DrawCall-->	
+		<div>
+			<h4  id="LinefyDrawcall">   <b>LinefyDrawcall:</b>
+			    <small><a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+			</h4>
+			<p> An abstract base class for <a href=#Lines>Lines</a>, <a href=#Polyline>Polyline</a>, <a href=#Dots>Dots</a>,  <a href=#PolygonalMesh>PolygonalMesh</a> </p>
+	  		
+			<div class="method" id="LinefyDrawCallBoundsSize">
+				<p class="methodString">  <small>float</small> <b>boundSize</b>   </p>
+					<p> The bound size. If value is negative then auto recalculation of bounds will performed</p>
+			</div>
+
+			<div class="method" id="LinefyDrawCallRenderOrder">
+				<p class="methodString">  <small>int</small> <b>renderOrder</b>   </p>
+					<p> Render queue of material.</p>
+			</div>
+
+			<div class="method" id="LinefyDrawCallTransparent">
+				<p class="methodString">  <small>int</small> <b>transparent</b>   </p>
+					<p>	Sets opaque or transparent material. When off, an opaque material with alpha clipping is used. Note that transparent materials have sorting issues.</p>
+			</div>
+				
+			<div class="method" id="LinefyDrawCallColorMultiplier">
+				<p class="methodString">  <small>Color</small> <b>colorMultiplier</b>   </p>
+					<p>	Base color </p>
+			</div>
+ 			
+			<div class="method" id="LinefyDrawCallTexture">
+				<p class="methodString">  <small>Texture</small> <b>texture</b>   </p>
+					<p>	Main texture. </p>
+			</div>
+			
+			<div class="method" id="LinefyDrawCallviewOffset">
+				<p class="methodString">  <small>float</small> <b>viewOffset</b>   </p>
+					<p>	Shifts all vertices in world space along the view direction by this value. Useful for preventing z-fight</p>
+					<details>
+					<summary> Example of how viewOffset works </summary>
+					<img src=content/view-offset.xpng > 
+					</details>
+			</div>
+			
+			<div class="method" id="depthOffset">
+				<p class="methodString">  <small>float</small> <b>depthOffset</b>   </p>
+					<p>	Material depth offset factor.</p>
+			</div>
+			
+			<div class="method" id="fadeAlphaDistance">
+				<p class="methodString">  <small>RangeFloat</small> <b>fadeAlphaDistance</b>   </p>
+					<p>	The distance to camera which color alpha (transparency) fading start / end</p>
+					<details>
+					<summary> Example of how fadeAlphaDistance works </summary>
+					<img src=content/fade-alpha-distance.xpng > 
+					</details>
+			</div>
+			
+			<div class="method" id="zTest">
+				<p class="methodString">  <small>CompareFunction</small> <b>zTest</b>   </p>
+					<p>How should depth testing be performed. An wrapper for shader ZTest state.</p>
+			</div>
+			
+		</div>
+	
+		<hr class="palehr">
+		<!-- Polygonal mesh-->	
+		<div>
+			<h4  id="PolygonalMesh">  	<img src="content/polygonal-mesh-preview.xgif" >  
+				<b>PolygonalMesh:</b>   
+					<small>  <a href=#LinefyDrawcall>LinefyDrawcall :</a> <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+
+				</h4>
+			<p>  High-level wrapper for <a href=https://docs.unity3d.com/ScriptReference/Mesh.html> Mesh</a> with polygon-based topology. 
+			Unlike other <a href=#LinefyDrawcall>LinefyDrawcall</a> classes, there is access to the internal generated mesh <b>generatedMesh</b>. 
+			You can assign it to a  <a href="https://docs.unity3d.com/ScriptReference/MeshFilter-mesh.html">MeshFilter.mesh</a>, or instantiate. 
+			There is a built-in vertex-lit, vertex color, textured material that is used when drawing with <a href=#DrawableDraw>Draw()</a> and <a href=#DrawableDrawNow>DrawNow()</a>. </p>
+				
+			<div class="method" id="PolygonalMeshConstructor">
+				<p class="methodString">  <small>constructor</small> <b>PolygonalMesh(</b>  <small>Vector3[]</small> <em>posData</em> , <small>Vector2[]</small> <em>uvsData</em>, <small>Color[]</small> <em>colorsData</em>, <small>Polygon[]</small> <em>polygonsData</em> <b>)</b> </p>
+				<p> Creates  <small>PolygonalMesh</small> instance </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>posData</em> - initial vertices positions </li>
+					<li> <em>uvsData</em> - initial UV coordinates. Can be <small>null</small> </li>
+					<li> <em>colorsData</em> - initial colors. Can be <small>null</small> </li>
+	 				<li> <em>polygonsData</em> - array of <a href=#Polygon>Polygon</a> </li>
+				</ul>
+			 	<p class="example" ><a  href="content/examples-polygonal-mesh-constructor.html"> Example </a> </p>
+			</div>
+			
+			<div class="method" id="PolygonalMeshAssignAttributes">
+				<p class="methodString">  <small>void</small> <b>SetPosition(), SetColor(), SetUV()</b>   </p>
+					<p> methods for assign vertices attributes</p>
+			</div>
+ 
+ 			<div class="method" id="PolygonalMeshApply">
+				<p class="methodString">  <small>void</small> <b>Apply() </b>   </p>
+					<p> Updates the generated mesh. Automatically called before any drawing. Use only if you want to update the mesh, but don't draw it.</p>
+			</div>
+ 
+  			<div class="method" id="DynamicTriangulationThreshold">
+				<p class="methodString">  <small>int</small> <b>dynamicTriangulationThreshold </b>   </p>
+					<p> The number of corners in a polygon, greater than or equal to which the polygon will dynamically re-triangulate when its shape changes.</p>
+					<details>
+					<summary> Example of how dynamicTriangulationThreshold work </summary>
+					<img src=content/dynamic-triangulation-threshold.xgif > 
+					</details>
+			</div>
+ 
+	  		<div class="method" id="PolygonalMeshLightingMode">
+				<p class="methodString">  <small>LightingMode</small> <b>lighingMode </b>   </p>
+					<p> Defines algorithm of recalculation  mesh lighting data .</p>
+			</div>
+
+	  		<div class="method" id="PolygonalMeshNormalsRecalculationMode">
+				<p class="methodString">  <small>NormalsRecalculationMode</small> <b>normalsRecalculationMode </b>   </p>
+					<p> Defines mesh normals recalculation algorithm. </p>
+			</div>
+			
+			<div class="method" id="PolygonalMeshtextureTransform">
+				<p class="methodString">  <small>Vector4</small> <b>textureTransform </b>   </p>
+					<p> Texture transform of internal material. xy = scale zw = offset </p>
+			</div>
+			
+			<div class="method" id="PolygonalMeshDoublesided">
+				<p class="methodString">  <small>bool</small> <b>doublesided </b>   </p>
+					<p> Enables doublesided render mode of internal meaterial </p>
+			</div>
+			
+			<div class="method" id="Ambient">
+				<p class="methodString">  <small>float</small> <b>ambient</b>   </p>
+					<p> Ambient lighting of internal material.  0 = backface is black   1  = backface equals main color ( unlit shading )  </p>
+			</div>
+			
+			<div class="method" id="GeneratedMesh">
+				<p class="methodString">  <small>Mesh</small> <b>generatedMesh</b>   </p>
+					<p>  The current state of internal mesh. You should not modify it, use it on read-only mode.  </p>
+			</div>
+			
+			<div class="method" id="PositionEdgesWireframe ">
+				<p class="methodString">  <small><a href=#Lines>Lines</a> </small> <b>positionEdgesWireframe </b>   </p>
+					<p>  if <i>positionEdgesWireframe</i> instance provided, then it will automatically setups(assign lines count and its positions) to display edges wireframe. 
+					Note that you should draw wireframe in same matrix as PolygonalMesh. 
+					To avoid  intersections of wireframe with mesh surfaces, adjust <a href=#LinefyDrawCallviewOffset>viewOffset</a> of one of them. </p>
+			</div>
+			
+			<p> Use class  <b>SerializationData_PolygonalMesh</b> from <small>Linefy.Serialization</small> namespace 
+			to serialize all properties of <b>PolygonalMesh</b> at once and display its properties in inspector.</p>
+			
+			<div class="method" id="PolygonalMeshDeserialization">
+				<p class="methodString">  <small>void</small> <b>LoadSerializationData(<small> SerializationData_PolygonalMesh</small> <em>inputData</em>) </b>   </p>
+					<p>Reads and apply <em>inputData</em> to this instance properties (deserialization)</p>
+ 			</div>
+			
+			<div class="method" id="PolygonalMeshSerialization">
+				<p class="methodString">  <small>void</small> <b>SaveSerializationData(<small> SerializationData_PolygonalMesh</small> <em>outputData</em>) </b>   </p>
+					<p>Writes the current properties to the <em>outputData</em> (serialization)</p>
+ 			</div>
+		
+			<div class="method" id="BuildFromSPM">
+				<p class="methodString">  <small>void</small> <b>BuildFromSPM(<small><a href=#PolygonalMeshAsset>SerializedPolygonalMesh</a></small> <em>spm</em>) </b>   </p>
+					<p>Reads and apply polygons, vertices positions, colors and UV data from <em>spm</em> (deserialization)</p>
+ 			</div>
+		
+			<div class="method" id="SaveToSPM">
+				<p class="methodString">  <small>void</small> <b>SaveToSPM(<small> <a href=#PolygonalMeshAsset>SerializedPolygonalMesh</a>  </small> <em>spm</em>) </b>   </p>
+					<p>Writes polygons, vertices positions, colors and UV data to <em>spm</em> (serialization)</p>
+ 			</div>
+		
+		</div>	
+	
+		<hr class="palehr">
+		<!--PrimitivesGroup-->	
+		<div>
+			<h4  id="PrimitivesGroup">   <b>PrimitivesGroup:</b>  
+			    <small> <a href=#LinefyDrawcall>LinefyDrawcall :</a> <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+
+			</h4>
+			<p> An abstract base class for <a href=#Lines>Lines</a>, <a href=#Polyline>Polyline</a>, <a href=#Dots>Dots</a>  </p>
+	  
+	  		<div class="method" id="count">
+				<p class="methodString">  <small>int</small> <b>count</b>   </p>
+					<p>Number of elements.</p>
+			</div>
+	  
+	  		<div class="method" id="capacityChangeStep">
+			<p class="methodString">  <small>int</small> <b>capacityChangeStep</b>   </p>
+					<p>Determines how often the internal arrays capacity will change when count changes.   A lower value saves the GPU performance, but leads to a frequent allocation of memory when the count changing. Set CapacityChangeStep = 1 in case of you do not plan to dynamically change the count. </p>
+			</div>
+	  
+	  	  	<div class="method" id="widthMultiplier">
+				<p class="methodString">  <small>float</small> <b>widthMultiplier</b>   </p>
+					<p>Width factor. The used measuremnt units are defined by the <a href=#widthMode>widthMode</a> </p>
+			</div>
+	  
+	  	  	<div class="method" id="widthMode">
+				<p class="methodString">  <small><a href=#WidthMode> WidthMode</a></small> <b>widthMode</b>   </p>
+					<p>Algorithm for calculating the width.  </p>
+			</div>
+	  
+		</div>
+		
+		<hr class="palehr">
+		<!--Dots-->	
+		<div>
+			<h4  id="Dots"> <img src= content/dots-preview.xgif >    <b>Dots: </b>   
+				<small><a href=#PrimitivesGroup>PrimitivesGroup :</a> <a href=#LinefyDrawcall>LinefyDrawcall :</a> <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+			</h4>
+			<p> An array of textured 3D rectangles.  Each rectangle is described by the <a  href = #Dot>Dot</a> structure.  Works in conjunction with 	<a href=#DotsAltas>DotsAtlas</a>, where described the texture source  and coordinates layout.</p>
+ 
+			
+	  		<div class="method" id="atlas">
+				<p class="methodString">  <small>DotsAtlas</small> <b>atlas</b>   </p>
+					<p>The used <a href=#DotsAltas>DotsAtlas</a>. If <small>null</small> then used default atlas that located in <i>Assets/Plugins/Linefy/Resources/Default DotsAtlas</i></p>
+			</div>
+	  
+ 	  		<div class="method" id="DotsIndexer">
+				<p class="methodString">  <small>Dot</small> <b>[int]</b>   </p>
+					<p> indexer to get/set individual  <a  href = #Dot>Dot</a> </p>
+					<p class="example" ><a  href="content/examples-dots-indexer.html"> Example </a> </p>
+ 			</div>
+			
+			<div class="method" id="DotsMethods">
+				<p class="methodString">  <small>void</small> <b>SetPosition(), SetColor, SetRectIndex()..</b>   </p>
+					<p>Methods for set dots attributes</p>
+					<p class="example" ><a  href="content/examples-dots-attributes.html"> Example </a> </p>
+			</div>
+			
+			<div class="method" id="DotsPixelPerfect">
+				<p class="methodString">  <small>bool</small> <b>pixelPerfect</b>   </p>
+					<p>Enables pixel perfect rendering mode, which ensures that the onscreen size and defined dot size are always the same. Only works for widthMode == PixelsBillboard. </p>
+			</div>
+			
+			<p> Use class  <b>SerializationData_Dots</b> from <small>Linefy.Serialization</small> namespace 
+			to serialize all properties of <b>Dots</b> at once and display it in inspector.</p>
+			
+			<div class="method" id="DotsDeserialization">
+				<p class="methodString">  <small>void</small> <b>LoadSerializationData(<small>Linefy.Serialization.SerializationData_Dots</small> <em>inputData</em>) </b>   </p>
+					<p>Reads and apply <em>inputData</em> to this instance properties (deserialization)</p>
+ 			</div>
+			
+			<div class="method" id="DotsSerialization">
+				<p class="methodString">  <small>void</small> <b>SaveSerializationData(<small>Linefy.Serialization.SerializationData_Dots</small> <em>outputData</em>) </b>   </p>
+					<p>Writes the current properties to the <em>outputData</em> (serialization)</p>
+ 			</div>
+			
+			<p> <b>EditableDots</b>   <img src="content/editable-dots-icon.xpng"> component is <a href="https://en.wikipedia.org/wiki/WYSIWYG"> WYSIWYG </a> representation of <b>Dots</b> class. You can adjust  
+				properties in inspector and set position using scene view handles. To create <b>EditableDots</b> use menu 
+				<i>GameObject/3d Object/Linefy/EditableDots</i>	 </p>
+	  
+		</div>
+		
+		<hr class="palehr">
+		<!--LinesBase-->	
+		<div>
+			<h4  id="LinesBase">  
+				<b>LinesBase:</b> 
+			    <small><a href=#PrimitivesGroup>PrimitivesGroup :</a> <a href=#LinefyDrawcall>LinefyDrawcall :</a> <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+			</h4>
+			   
+			<p>  An abstract base class for <a href=#Lines>Lines</a>, <a href=#Polyline>Polyline</a>   </p>
+			
+			<div class="method" id="Feather">
+				<p class="methodString">  <small>float</small> <b>feather</b>   </p>
+					<p>The smoothness of the edges.  Works only when <a href=#LinefyDrawCallTransparent> transparent </a> is on. 
+					This value defines the distance the color.alpha decays from the edge of the line. 
+					Can be used to draw anti-aliased lines. When used <a href=#WidthMode> widthMode</a> : PixelsBillboard, WorldspaceBillboard, 
+					PercentOfScreenHeight is measured with onscreen pixels. When used  WorldspaceXY -  in world units.</p>
+					
+					<details>
+					<summary> Example of how feather works </summary>
+					<img src=content/feather.xpng > 
+					</details>
+					
+ 			</div>
+			
+			<div class="method" id="AutoTextureOffset">
+				<p class="methodString">  <small>bool</small> <b>autoTextureOffset</b>   </p>
+					<p>When on the textures offset foreach vertex will recalculated automatically when its positions changed</p>
+					
+					<details>
+					<summary> Example of how autoTextureOffset works </summary>
+					<img src=content/auto-texture-offset.xgif > 
+					</details>
+		
+ 			</div>
+			
+			<div class="method" id="TextureOffset">
+				<p class="methodString">  <small>bool</small> <b>textureOffset</b>   </p>
+					<p>x texture coordinates offset</p>
+ 			</div>
+			
+			<div class="method" id="TextureScale">
+				<p class="methodString">  <small>bool</small> <b>textureScale</b>   </p>
+					<p>x texture coordinates scale</p>
+ 			</div>
+			
+		</div>
+		
+		<hr class="palehr">
+		<!--Lines-->	
+		<div>
+			<h4  id="Lines"> <img src="content/lines-preview.xgif"> 
+				<b>Lines:</b>   
+					<small><a href=#LinesBase>LinesBase : </a><a href=#PrimitivesGroup>PrimitivesGroup :</a> <a href=#LinefyDrawcall>LinefyDrawcall :</a> <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+				</h4>
+ 				<p>The array of 3d lines. Each line described by <a href=#Line>Line</a> structure.</p>
+ 
+			
+			<div class="method" id="LinesIndexer">
+				<p class="methodString">  <small>Line</small> <b>[int]</b>   </p>
+					<p> indexer to get/set individual  <a  href = #Line>Line</a> </p>
+					<p class="example" ><a  href="content/examples-lines-indexer.html"> Example </a> </p>
+					 
+					
+ 			</div>
+			
+			<div class="method" id="LinesMethods">
+				<p class="methodString">  <small>void</small> <b>SetPosition(), SetColor, SetWidth()..</b>   </p>
+					<p>Methods for set lines attributes</p>
+					<p class="example" ><a  href="content/examples-lines-attributes.html"> Example </a> </p>
+			</div>
+
+			
+			<p> Use class  <b>SerializationData_Lines</b> from <small>Linefy.Serialization</small> namespace 
+			to serialize all properties of <b>Lines</b> at once and display it in inspector.</p>
+			
+			<div class="method" id="LinesDeserialization">
+				<p class="methodString">  <small>void</small> <b>LoadSerializationData(<small> SerializationData_Lines</small> <em>inputData</em>) </b>   </p>
+					<p>Reads and apply <em>inputData</em> to this instance properties (deserialization)</p>
+ 			</div>
+			
+			<div class="method" id="LinesSerialization">
+				<p class="methodString">  <small>void</small> <b>SaveSerializationData(<small> SerializationData_Lines</small> <em>outputData</em>) </b>   </p>
+					<p>Writes the current properties to the <em>outputData</em> (serialization)</p>
+ 			</div>
+			
+			<p> <b>EditableLines </b>   <img src="content/editable-lines-icon.xpng"> component is <a href="https://en.wikipedia.org/wiki/WYSIWYG"> WYSIWYG </a> representation of <b>Lines</b> class. You can adjust  
+				properties in inspector and set position using scene view handles. To create <b>EditableLines</b> use menu 
+				<i>GameObject/3d Object/Linefy/EditableLines</i>	 </p>
+			
+		</div>
+		
+		<hr class="palehr">
+		<!--Polyline-->	
+		<div>
+			<h4  id="Polyline"> <img src="content/polyline-preview.xgif"> 
+				<b>Polyline:</b>   
+					<small><a href=#LinesBase>LinesBase : </a><a href=#PrimitivesGroup>PrimitivesGroup :</a> <a href=#LinefyDrawcall>LinefyDrawcall :</a> <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+
+				
+				</h4>
+ 				<p>3d polyline that defined by array of <a href=#PolylineVertex>PolylineVertex</a> connected sequentially.  </p>
+	 
+			
+			<div class="method" id="PolylineIndexer">
+				<p class="methodString">  <small>PolylineVertex</small> <b>[int]</b>   </p>
+					<p> indexer to get/set individual  <a  href = #Line>PolylineVertex</a>. Note that <a = href=#PolylineVertex>PolylineVertex</a> is <a href=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types>value type</a>. </p>
+					<p class="example" ><a  href="content/examples-polyline-indexer.html"> Example </a> </p>
+ 			</div>
+			
+			<div class="method" id="PolylineMethods">
+				<p class="methodString">  <small>void</small> <b>SetPosition(), SetColor, SetWidth()..</b>   </p>
+					<p>Methods for set vertices attributes</p>
+					<p class="example" ><a  href="content/examples-polyline-attributes.html"> Example </a> </p>
+			</div>
+			
+			<div class="method" id="IsClosed">
+				<p class="methodString">  <small>bool</small> <b>isClosed</b>   </p>
+					<p>If enabled, connects first and last vertex. </p>
+			</div>
+			
+			<div class="method" id="IsClosed">
+				<p class="methodString">  <small>bool</small> <b>lastVertexTextureOffset</b>   </p>
+					<p>	The texture offset of the last virtual vertex when the polyline is closed. </p>
+			</div>
+			
+			<p> Use class  <b>SerializationData_Polyline</b> from <small>Linefy.Serialization</small> namespace 
+			to serialize all properties of <b>Polyline</b> at once and display it in inspector.</p>
+			
+			<div class="method" id="PolylineDeserialization">
+				<p class="methodString">  <small>void</small> <b>LoadSerializationData(<small> SerializationData_Polyline</small> <em>inputData</em>) </b>   </p>
+					<p>Reads and apply <em>inputData</em> to this instance properties (deserialization)</p>
+ 			</div>
+			
+			<div class="method" id="PolylineSerialization">
+				<p class="methodString">  <small>void</small> <b>SaveSerializationData(<small> SerializationData_Polyline</small> <em>outputData</em>) </b>   </p>
+					<p>Writes the current properties to the <em>outputData</em> (serialization)</p>
+ 			</div>
+			
+			<p> <b>EditablePolylines </b>   <img src="content/editable-polyline-icon.xpng"> component is <a href="https://en.wikipedia.org/wiki/WYSIWYG"> WYSIWYG </a> representation of <b>Polyline</b> class. You can adjust  
+				properties in inspector and set position using scene view handles. To create <b>EditablePolyline</b> use menu 
+				<i>GameObject/3d Object/Linefy/EditablePolyline</i>	 </p>
+			
+		</div>
+		
+		<hr class="palehr">
+		<!-- Labels Renderer-->	
+		<div>
+			<h4  id="LabelsRenderer">  <img src=content/labels-renderer-preview.xgif >  
+				<small>   <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+			</h4>
+			<p>  A 3d text renderer object. Incapsulates array of <a = href=#Label>Labels</a>. Based on the <a href=#Dots>Dots</a> class, therefore has most of the same properties.  </p>
+						
+			<div class="method" id="LabelsRendererAtlas">
+				<p class="methodString">  <small>DotsAtlas</small> <b>atlas </b>   </p>
+					<p> Font <a href=#DotsAtlas>DotsAtlas</a>. If <small>null</small>, the default font will be used.</p>
+			</div>
+			
+			<div class="method" id="LabelsRendererIndexer">
+				<p class="methodString">  <small>Label</small> <b>[int]</b>   </p>
+					<p>get/set labels indexer. Note that <a = href=#Label>Labels</a> is <a href=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types>value type</a>. </p>
+			</div>
+			
+			<p class="example" ><a  href="content/examples-labels-renderer.html"> Example </a> </p>
+			
+			<div class="method" id="SetLabelsAttributes">
+				<p class="methodString">  <small>void</small> <b>SetPosition(), SetText(), SetOffset() </b>   </p>
+					<p>Methods for assigning labels position, text, offset  by index.</p>
+			</div>
+
+			<div class="method" id="LabelsRendererSize">
+				<p class="methodString">  <small>float</small> <b>size</b>   </p>
+					<p> A size multiplier. The measurement units are defined by widthMode property.</p>
+			</div>
+ 			
+			<div class="method" id="LabelsRendererDrawBackground">
+				<p class="methodString">  <small>bool</small> <b>drawBackground</b>   </p>
+					<p> Enables the display of a 9-grid-slice background behind the text. The background are configured in <a href=#DotsAtlas>DotsAtlas</a>. </p>
+			</div>
+ 		 
+			<div class="method" id="LabelsRendererBackgroundExtraSize">
+				<p class="methodString">  <small>Vector2</small> <b>backgroundExtraSize</b>   </p>
+					<p> The size to be added to the automatically calculated background size.  </p>
+			</div>
+			
+			<div class="method" id="LabelsRendererPixelPerfect">
+				<p class="methodString">  <small>bool</small> <b>pixelPerfect</b>   </p>
+					<p> Snaps the position of glyphs to the nearest pixel on the screen so that guarantee exact pixel dimensions of glyphs. </p>
+			</div>
+			
+			<div class="method" id="LabelsRendererColors">
+				<p class="methodString">  <small>Color</small> <b> backgroundColor, textColor</b>   </p>
+					<p> Background and text colors respectively </p>
+			</div>
+			
+			<div class="method" id="LabelsRendererCount">
+				<p class="methodString">  <small>int</small> <b>count</b>   </p>
+					<p>Number of Labels</p>
+			</div>
+  
+			<div class="method" id="LabelsRendererHorizontalAlignment">
+				<p class="methodString">  <small>TextAlignment</small> <b>horizontalAlignment </b>   </p>
+					<p>The positioning of the text reliative its center</p>
+			</div>
+ 			
+			<div class="method" id="LabelsRendererWidthMode">
+				<p class="methodString">  <small>WidthMode</small> <b>widthMode </b>   </p>
+					<p>this property is equivalent of widthMode but not supported WorldspaceBillboard </p>
+			</div>
+
+			<p id="LinefyLabelsRenderer"> <b>LinefyLabelsRenderer </b>   <img src="content/labels-renderer-icon.xpng"> component is <a href="https://en.wikipedia.org/wiki/WYSIWYG"> WYSIWYG </a> representation of <b>LabelsRenderer</b> class. You can adjust  
+				properties in inspector. To create   use menu 
+				<i>GameObject/3d Object/Linefy/LabelRenderer</i>	 </p>
+
+		</div>
+	
+			
+		<hr class="palehr">
+		<!--Primitives-->	
+		<div>
+			<h4 id="Primitives"> <b>Primitives: </b> 
+				<small>   <a href=#Drawable>Drawable</a>    namespace:Linefy </small>  
+			</h4>
+			<p>  Primitives are ready-to-use procedural 3d objects.</p>
+						 	<p class="example" ><a  href="content/examples-primitives.html"> Example </a> </p>
+			
+			<p>
+   Each primitive has its own component implementation using which you can visually familiarize with its parameters.
+ To create primitives components use menu
+			</p>
+			<img = src="content/primitives-menu.xpng">
+			
+		</div>
+	
+	</div>
+	
+	<hr>
+	
+	<!-- EditorClasses -->	
+	<div>
+		<h3 id="EditorClasses"> Editor Classes   </h3>
+		<p> Here described editor classes</p>
+		<hr class="palehr">
+		<!-- OnSceneGUIGraphics -->	
+		<div>
+			<h4   id="OnSceneGUIGraphics">  <b>OnSceneGUIGraphics</b>  <small> namespace:Linefy </small>    </h4>  
+			<p> The static manager that controls drawing on Scene View </p>
+			<div class="method" id="OnSceneGUIGraphicsDrawWorldspace">
+				 <p class="methodString"> <small>void</small> <b>DrawWorldspace(</b> <small>Drawable</small> <em>item</em>, <small>Matrix4x4</small> <em>matrix</em>   <b>)</b> </p>
+					<p> Submit object to render. Use inside <a href=https://docs.unity3d.com/ScriptReference/Editor.OnSceneGUI.html>OnSceneGUI</a>  only.  </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>item</em> - an item that should be drawen in Scene view </li>
+					<li> <em>matrix</em> - world space matrix   </li>
+				</ul>
+ 			</div>
+			
+			<div class="method" id="OnSceneGUIGraphicsDrawGUIspace">
+				 <p class="methodString"> <small>void</small> <b>DrawGUIspace(</b> <small>Drawable</small> <em>item</em>, <small>Matrix4x4</small> <em>matrix</em>   <b>)</b> </p>
+					<p> Submit object to render. Use inside <a href=https://docs.unity3d.com/ScriptReference/Editor.OnSceneGUI.html>OnSceneGUI</a>  only.  </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>item</em> - an item that should be drawen in Scene view GUI space</li>
+					<li> <em>matrix</em> - GUI space matrix.  Matrix position is position in pixels from top left to bottom right corner of Scene view.</li>
+				</ul>
+ 
+			</div>
+			
+			<div class="method" id="SceneViewPixelSize">
+				<p class="methodString"> <small>Vector2</small> <b>GetSceneViewPixelSize()</b> </p>
+				   <p> Returns size of Scene view in pixels  </p>
+			</div>
+			
+		</div>
+		
+		<hr class="palehr">
+		
+		
+		<!-- EditorGUIViewport -->	
+		<div>
+			<h4   id="EditorGUIViewport">  <b>EditorGUIViewport</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> The view area of a virtual orthographic scene that can be displayed in the editor GUI in the specified rect. Designed for drawing in a Editor Window and Inspectors. </p>
+ 		
+			<details>
+			<summary> Comparing GUI and Local Coordinate Systems </summary>
+			<img  src="content/editor-gui-viewport-spaces.xpng"> 
+			</details>
+ 
+			<p>For correct display, use this sequence of actions when <small> EventType.Repaint </small> raised
+				<ol>
+					<li> Set parameters using <b>SetParam()</b> </li>
+					<li> Submit <small>Drawable</small> to draw using <b>DrawGUISpace</b> or <b>DrawLocalSpace</b></li>
+					<li> Call <b>Render()</b> </li>
+				</ol>
+			</p>
+ 			
+			<div class="method" id="EditorGUIViewportSetParams">
+				 <p class="methodString"> <small>void</small> <b>SetParams(</b> <small>Rect</small> <em>rect</em>, <small>float</small> <em>zoom</em> , <small>Vector2</small> <em>pan</em>   <b>)</b> </p>
+					<p> Setup viewport  </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>rect</em> - GUI rect where viewport should be drawen</li>
+					<li> <em>zoom</em> - view size <small>(default = 1)</small> </li>
+					<li> <em>pan</em> - view offset <small>(default Vector2.zero)</small></li>
+				</ul>
+ 
+			</div>
+			
+			<div class="method" id="EditorGUIViewportDrawLocalSpace">
+				 <p class="methodString"> <small>void</small> <b>DrawLocalSpace(</b> <small>Drawable</small> <em>item</em>, <small>Matrix4x4</small> <em>matrix</em>   <b>)</b> </p>
+					<p> Submit object to render in scene local space </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>item</em> - an item that should be drawen in vieport</li>
+					<li> <em>matrix</em> - viewport space matrix. </li>
+				</ul>
+ 			</div>
+			
+			<div class="method" id="EditorGUIViewportDrawLocalSpace">
+				 <p class="methodString"> <small>void</small> <b>DrawGUISpace(</b> <small>Drawable</small> <em>item</em>, <small>Matrix4x4</small> <em>matrix</em>   <b>)</b> </p>
+					<p> Submit object to render in GUI space </p>
+ 
+				<ul class = "clearlist">
+					<li> <em>item</em> - an item that should be drawen in vieport</li>
+					<li> <em>matrix</em> - GUI space matrix. Matrix position of defines GUI position </li>
+				</ul>
+ 
+			</div>
+			
+			<div class="method" id="EditorGUIViewportRender">
+    			<p class="methodString"> <small>void</small> <b>Render(</b> <small>Drawable</small> <em>item</em>, <small>Matrix4x4</small> <em>matrix</em>   <b>)</b> </p>
+				<p> Actually draws GUI rect with rendered scene</p>
+ 			</div>
+		</div>
+		
+		<hr class="palehr">
+		
+		<!-- Handles -->	
+		<div>
+		<h4   id="EditorHandles">  <b>Handles</b>     </h4> 
+		<p>  Custom 3D controls for Scene view.  </p>
+		
+			<!-- Vector3Handle -->	
+			<div>
+				<h4   id="Vector3Handle">  <b>Vector3Handle</b>  <small> namespace:Linefy </small>    </h4> 
+				<img  src="content/vector3-handle-preview.xgif"> 
+				<p>  An 3d space position handle. Similar to <a href="https://docs.unity3d.com/ScriptReference/Handles.FreeMoveHandle.html">FreeMoveHandle</a> </p>
+				
+				<div class="method" id="Vector3HandleConstructor">
+					<p class="methodString">  <small>constructor</small> <b>Vector3Handle(</b><small>string</small> <em>name</em>, <small>int</small> <em>id</em>, <small>Vector3Handle.Style</small> <em>style</em>    <b>) </b>   </p>
+					<p> Creates  <small>Vector3Handle</small> instance </p>
+					<ul class = "clearlist">
+						<li> <em>name</em> - handle name </li>
+						<li> <em>id</em> - handle Id. Use to identify actions when multiple handles exist. </li>
+						<li> <em>style</em> - handle style </li>
+	 
+					</ul>
+				</div>
+				
+				<div class="method" id="Vector3HandleDrawOnSceneGUI">
+					<p class="methodString">  <small>Vector3</small> <b>DrawOnSceneGUI(</b><small> Vector3</small> <em>  position</em>  <b>) </b>   </p>
+						<p>draw handle at given <em>position</em> 
+						The new value modified by the user's interaction with the handle. 
+						If the user has not moved the handle, it will return the same value as you passed into the function.</p>
+				</div>
+				
+				<div class="method" id="Vector3HandleonDragStart">
+					<p class="methodString">  <small>Action &lt;int&gt; </small> <b>onDragStart </b>   </p>
+						<p>The action is fired when the dragging an handle starts where <small>int</small> is handle id. </p>
+				</div>
+				
+				<div class="method" id="Vector3HandleonDragUpdate">
+					<p class="methodString">  <small>Action &lt;int&gt; </small> <b>onDragUpdate </b>   </p>
+						<p>The action is fired when handle dragging where <small>int</small> is handle id.</p>
+				</div>
+				
+				<div class="method" id="Vector3HandleonDragEnd">
+					<p class="methodString">  <small>Action &lt;string, int, Vector3&gt; </small> <b>onDragEnd </b>   </p>
+						<p>The action is fired when the dragging an handle ends where <small>int</small> is handle id, <small>string</small> name, <small>Vector3</small> position value.</p>
+				</div>
+				
+				
+				<div class="method" id="Vector3HandleonDragEnd">
+					<p class="methodString">  <small>void</small> <b>Dispose</b>   </p>
+						<p> Destroys all internal unmanaged Objects. Use in 
+						
+						<a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.OnDestroy.html">OnDestroy() </a>
+						and 
+						<a href = "https://docs.unity3d.com/ScriptReference/ScriptableObject.OnDisable.html">OnDisable() </a>
+
+						to cleanup unused resources. </p>
+				</div>
+				
+				
+			</div>
+			
+			<!-- Matrix4x4handle -->	
+			<hr class="palehr">
+			<div>
+				<h4   id="Matrix4x4Handle">  <b>Matrix4x4Handle</b>  
+				<small> namespace:Linefy </small>    </h4> 
+				<img  src="content/matrix4x4-handle-preview.xgif"> 
+				<p>  An 3d space Matrix4x4 handle. Similar to <a href="https://docs.unity3d.com/ScriptReference/Handles.TransformHandle.html">Handles.TransformHandle  </a> 
+				but deals with <small>ref Matrix4x4</small> as argument .
+				Position, Rotation, Scale Modes switches accordingly with current editor Tool.   
+				</p>
+				
+				<div class="method" id="Matrix4x4HandleConstructor">
+					<p class="methodString">  <small>constructor</small> <b>Matrix4x4Handle(</b><small>string</small> <em>name</em>, <small>int</small> <em>id</em>  <b>) </b>   </p>
+					<p> Creates  <small>Matrix4x4Handle</small> instance </p>
+					<ul class = "clearlist">
+						<li> <em>name</em> - handle name </li>
+						<li> <em>id</em> - handle Id. Use to identify actions when multiple handles exist. </li>
+					</ul>
+				</div>
+				
+				
+				<div class="method" id="Matrix4x4HandleDrawOnSceneGUI">
+					<p class="methodString">  <small>void</small> <b>DrawOnSceneGUI( </b><small>ref Matrix4x4</small> <em>matrix</em>,  <small>float</small> <em>sizeMultiplier</em>,  <small>bool</small>  <em>active</em>,  <small>bool</small>  <em>drawIdLabel</em>,    <small>bool</small>  <em>drawNameLabel</em>    <b>) </b>   </p>
+						<p>draw handle at given <em>matrix</em> The new value modified by the user's interaction with the handle. 
+						If the user has not moved the handle, it will return the same value as you passed into the function.</p>
+				</div>
+				
+							<div class="method" id="Matrix4x4HandleDrawOnSceneGUI">
+					<p class="methodString">  <small>void</small> <b>DrawOnSceneGUI( </b><small>ref Matrix4x4</small> <em>matrix</em>,  <small>float</small> <em>sizeMultiplier</em>,  <small>bool</small>  <em>active</em>,  <small>bool</small>  <em>drawIdLabel</em>,    <small>bool</small>  <em>drawNameLabel</em>    <b>) </b>   </p>
+						<p>draw handle at given <em>matrix</em> The new value modified by the user's interaction with the handle. 
+						If the user has not moved the handle, it will return the same value as you passed into the function.</p>
+				</div>
+				
+				<div class="method" id="Matrix4x4HandleDragStart">
+					<p class="methodString">  <small>Action &lt;int&gt; </small> <b>onDragStart </b>   </p>
+						<p>The action is fired when the dragging an handle starts where <small>int</small> is handle id. </p>
+				</div>
+				
+				<div class="method" id="Matrix4x4HandleonDragUpdate">
+					<p class="methodString">  <small>Action &lt;int&gt; </small> <b>onDragUpdate </b>   </p>
+						<p>The action is fired when handle dragging where <small>int</small> is handle id.</p>
+				</div>
+				
+				<div class="method" id="Matrix4x4HandleonDragEnd">
+					<p class="methodString">  <small>Action &lt;string, int, Matrix4x4&gt; </small> <b>onDragEnd </b>   </p>
+						<p>The action is fired when the dragging an handle ends where <small>int</small> is handle id, <small>string</small> name, <small>Matrix4x4</small> matrix value.</p>
+				</div>
+				
+				
+				<div class="method" id="Matrix4x4HandleonDragEnd">
+					<p class="methodString">  <small>void</small> <b>Dispose</b>   </p>
+						<p> Destroys all internal unmanaged Objects. Use in 
+						<a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.OnDestroy.html">OnDestroy()</a>
+						and 
+						<a href = "https://docs.unity3d.com/ScriptReference/ScriptableObject.OnDisable.html">OnDisable()</a>
+						to cleanup unused resources. </p>
+				</div>
+			</div>	
+			
+			<!-- Vector3ArrayHandle -->	
+			<hr class="palehr">
+			<div>
+			<h4   id="Vector3ArrayHandle">  <b>Vector3ArrayHandle</b>  <small> namespace:Linefy </small>    </h4> 
+			<img  src="content/vector3array-handles.xgif"> 
+			<p>  The Handle to mass edit positions.  Position, Rotation, Scale Modes switches accordingly with current editor Tool.   
+			</p>
+			
+			<div class="method" id="Matrix4x4HandleConstructor">
+				<p class="methodString">  <small>constructor</small> <b>Matrix4x4Handle(<small>int</small> <em>count</em> ,  </b><small>string</small> <em>name</em> <b>) </b>   </p>
+				<p> Creates  <small>Vector3ArrayHandle</small> instance </p>
+				<ul class = "clearlist">
+					<li> <em>name</em> - handle name </li>
+					<li> <em>count</em> - initial items count</li>
+ 				</ul>
+			</div>
+			
+			
+			<div class="method" id="Vector3ArrayHandleDrawOnSceneGUI">
+				<p class="methodString">  <small>void</small> <b>DrawOnSceneGUI(  </b><small>SerializedProperty[]</small> <em>prp_positions</em>      <b>) </b>   </p>
+					<p>draw posions handles for each given <em>prp_positions[..].vector3Value</em> </p>
+			</div>
+			
+						
+			<div class="method" id="Vector3ArrayHandleDrawOnSceneGUI">
+				<p class="methodString">  <small>void</small> <b>DrawOnSceneGUI(  </b><small>Vector3[]</small> <em>positions</em>      <b>) </b>   </p>
+					<p>draw posions handles for each given <em>positions[..]</em> item </p>
+			</div>
+			
+			<p> When you call method DrawOnSceneGUI, the settings window is also displayed in Scene View.</p>
+			<img src="content/vector3handles-array-apperance.xpng">
+			
+			
+			<div class="method" id="Vector3ArrayHandleOnDragStart">
+				<p class="methodString">  <small>Action &lt;List&lt;int&gt&gt; </small> <b>onDragStart </b>   </p>
+					<p>The action is fired when the dragging an positions starts where <small>Action &lt;List&lt;int&gt&gt; </small> is selected items. </p>
+			</div>
+			
+			<div class="method" id="Vector3ArrayHandleOnDragUpdate">
+				<p class="methodString">  <small>Action &lt;List&lt;int&gt&gt; </small> <b>onDragUpdate </b>   </p>
+					<p>The action is fired when positions dragging where <small>Action &lt;List&lt;int&gt&gt; </small> is selected items.</p>
+			</div>
+			
+			<div class="method" id="Vector3ArrayHandleOnDragEnd">
+				<p class="methodString">  <small>Action &lt;List&lt;int&gt&gt; </small> <b>onDragEnd </b>   </p>
+					<p>The action is fired when the dragging an positions ends where <small>Action &lt;List&lt;int&gt&gt; </small> is selected items</p>
+			</div>
+			
+			<div class="method" id="Vector3ArrayHandleOnSelectionChanged">
+				<p class="methodString">  <small>Action &lt;List&lt;int&gt&gt; </small> <b>onSelectionChanged </b>   </p>
+					<p>The action is fired when the selection changed where <small>Action &lt;List&lt;int&gt&gt; </small> is selected items</p>
+			</div>
+			
+			
+			<div class="method" id="Matrix4x4HandleonDragEnd">
+				<p class="methodString">  <small>void</small> <b>Dispose</b>   </p>
+					<p> Destroys all internal unmanaged Objects. Use in 
+					<a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.OnDestroy.html">OnDestroy()</a>
+					and 
+					<a href = "https://docs.unity3d.com/ScriptReference/ScriptableObject.OnDisable.html">OnDisable()</a>
+					to cleanup unused resources. </p>
+			</div>
+ 		</div>	
+		
+		</div>
+	
+	</div>
+ 	
+	
+	<hr>
+ 	<!-- Assets -->	
+	<div>
+		<h3 id="Assets"> Assets </h3>
+ 
+		<!-- DotsAtlas -->	
+		<div>
+			<h4   id="DotsAtlas">  <img src="content/dot-atlas-icon.xpng"> <b>DotsAtlas:</b>  
+			<small> <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a>    namespace:Linefy  </small>  
+			</h4> 
+			<p>
+			An asset that refer to texture and describing its slicing, designed for use in conjunction with <a href=#Dots>Dots</a>. 
+			Each rectangle has its own index  that <a href=#Dot>Dot</a> can refer to.
+			</p>
+			
+			<p>
+			In the Unity Editor, create a new DotsAtlas  by going to: <i>Assets->Create->Linefy->DotsAtlas </i>
+			
+			</p>
+			
+			<details>
+			<summary> DotsAtlas setup </summary>
+			<img src="content/dots-atlas-setup.xgif">
+			</details>
+ 			
+			<p>
+			DotsAtlas can be used as bitmap font source for <a href= #LabelsRenderer>LabelsRenderer</a>. 
+			By default, the rects indices are equals to Unicode decimal value. 
+			To use custom character set <i>Font Settings -> Enable Remapping</i>.
+			</p>
+			
+			<details>
+			<summary> Bitmap font setup </summary>
+			<img src="content/font-atlas-setup.xgif">
+			</details>
+			
+			<p>
+			All font settings are applied after clicking the button <i>Apply Font settings</i>.
+			</p>
+			
+		</div>
+		
+		<hr class="palehr">
+		<!-- PolygonalMeshAsset -->	
+		<div>
+			<h4   id="PolygonalMeshAsset">  <img src="content/polygonal-mesh-asset.xpng"> 
+			<b>PolygonalMeshAsset:</b>  
+			<small> <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a>    namespace:Linefy </small>    </h4> 
+			<p>
+			An asset that used as data source for <a href=#PolygonalMeshRenderer>PolygonalMeshRenderer</a>. 
+			Contains an embedded  <a href=#SerializedPolygonalMesh>SerializedPolygonalMesh</a>.
+			The inspector has options for import polygonal mesh from <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">Wavefront .obj file</a>. 
+			</p>
+			<p>In the Unity Editor, create a new PolygonalMeshAsset by going to: <i>Assets->Create->Polygonal Mesh Asset</i> </p>
+			
+			<details>
+			<summary> Import and create PolygonalMeshRenderer </summary>
+			<img src="content/polymesh-import.xgif">
+			</details>
+		</div>
+		
+		<hr class="palehr">
+		<!-- SerializedPolygonalMesh  -->	
+		<div>
+			<h4   id="SerializedPolygonalMesh">  <img src="content/serialized-polygonal-mesh.xpng"> 
+			<b>SerializedPolygonalMesh:</b>  
+			<small> <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a>    namespace:Linefy </small>    </h4> 
+			<p>
+				A serialized representation of <a href=#PolygonalMesh>PolygonalMesh</a>. Stores topology and vertices data. You can  programmatically save the procedurally generated 
+				<a href=#PolygonalMesh>PolygonalMesh</a> using <a href=#SaveToSPM>SaveToSPM</a> as well load using	<a href=#BuildFromSPM>BuildFromSPM</a> 
+ 			</p>
+			
+			<p>There is no menu command  to create this asset separately. It can only be created as part of parent <a href=#PolygonalMeshAsset>PolygonalMeshAsset</a>.</p>
+		</div>
+		
+	</div>  
+	
+	<hr>
+ 	<!-- Components -->	
+	<div>
+		<h3 id="Components"> Components </h3>
+		<div>
+			<h4   id="PolygonalMeshRenderer">  <img src="content/polygonal-mesh-renderer.xpng"> <b>PolygonalMeshRenderer:</b>  
+			<small> <a href="https://docs.unity3d.com/Manual/class-MonoBehaviour.html">MonoBehaviour</a>    namespace:Linefy  </small>  
+			</h4> 
+			<img src="content/polygonal-mesh-renderer-preview.xpng">
+			<p> An component that render <a href=#SerializedPolygonalMesh>SerializedPolygonalMesh</a>. 
+			If the GameObject has a MeshFilter then component will replace it mesh by its own.  </p>
+			<ul class = "clearlist">
+				<li>  <small> <a href=#PolygonalMeshAsset>PolygonalMeshAsset</a> </small> <em>PolygonalMeshAsset</em> - source asset </li>
+				<li>  <small>SerializationData_PolygonalMesh</small> <em>polygonalMeshProperties</em> - serialized mesh properies  </li>
+				<li>  <small> bool </small> <em>drawDefault</em> -  if enabled, mesh will be 
+				drawen even without MeshRenderer and MeshFilter.  Parent GameObject transformation matrix and layer will be used.
+				Internal material will be used. </li>
+				<li>  <small> bool </small> <em>wireframeEnabled</em> - draw wireframe.  </li>
+				<li>  <small> bool </small> <em>autoWireframeViewOffset</em> - automatically calculate viewOffset for wireframe to pervent intersections with mesh surface </li>
+				<li>  <small>SerializationData_Lines</small> <em>wireframeProperties</em> - wireframe apperance </li>
+			</ul>
+			
+		</div>
+		
+		<hr class="palehr">
+		<div>
+			<h4   id="NearClipPlaneMatrix">  <img src="content/near-clip-plane-matrix-icon.xpng"> <b>NearClipPlaneMatrix:</b>  
+			<small> <a href="https://docs.unity3d.com/Manual/class-MonoBehaviour.html">MonoBehaviour</a>    namespace:Linefy  </small>  
+			</h4> 
+			<img src="content/screen-space-drawing.xgif">
+			
+			<p> This component calculate GUI and Screen space matrices for parent Camera and retain it as public fields. </p>
+ 
+			<ul class = "clearlist">
+				<li> <small> float </small> <em>offset</em> - offset from camera near clip plane.</li>
+				<li> <small> Matrix4x4 </small> <em>gui</em> - GUI space matrix.   </li>
+				<li> <small> Matrix4x4 </small> <em>screen</em> - screen space matrix.   </li>
+			</ul>
+			
+		</div>
+		
+		<hr class="palehr">
+		<div>
+			<h4   id="LinefyRectTransform">  <img src="content/rect-transform-matrix.xpng"> <b>LinefyRectTransform:</b>  
+			<small> <a href="https://docs.unity3d.com/Manual/class-MonoBehaviour.html">MonoBehaviour</a>    namespace:Linefy  </small>  
+			</h4> 
+			<p> An helper component that calculate and retain transform matrix from <a href="https://docs.unity3d.com/ScriptReference/RectTransform.html">RectTransform</a> </p>
+ 
+			<ul class = "clearlist">
+				<li> <small> bool </small> <em>centeredRectTransformMatrix</em> - if enabled - center of RectTransform is matrix position, 
+				othervise - center is left bottom corner.</li>
+				<li> <small> Matrix4x4 </small> <em>rectTransformWorldMatrix</em> - calculated matrix.   </li>
+ 			</ul>
+			
+		</div>
+	</div>
+	
+	
+	<hr>
+ 	<!-- Structures -->	
+	<div>
+		<h3 id="Structures"> Structures </h3>
+ 
+		<hr class="palehr">
+		<div>
+			<h4   id="Polygon">  <b>Polygon</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> A type that describes a single surface of a <a href=#PolygonalMesh>Polygonal Mesh.</a> </p>
+			
+			<ul class = "clearlist">
+				<li> <small>int</small> <em>smoothingGroup</em> -  Smoothing group ID. If an adjacent polygon has a different smoothing group ID, it shows a hard edge between them, otherwise the joint edge is smooth.</li>
+				<li> <small>int</small>  <em>materialId</em> -  not used at the moment. </li>
+				<li> <small>PolygonCorner[]</small>  <em>corners</em> -  The array of <a href=#PolygonCorner>PolygonCorner</a> that the polygon consists of. The order of corners matter. Corners connects sequentially counterclockwise. </li>
+				<img class="dImg" src=content/polygon-corners.xpng> 
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+		
+		<div>
+			<h4   id="PolygonCorner">  <b>PolygonCorner</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> The vertex of the  <a href=#Polygonon>Polygon</a> </p>
+			
+			<ul class = "clearlist">
+					<li> <small>int</small> <em>position</em> -  index of position</li>
+					<li> <small>int</small> <em>uv</em> -  index of UV coordinate </li>
+					<li> <small>int</small> <em>color</em> -  index of color </li>
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+		
+		<div>
+			<h4   id="Label">  <b>Label</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> Describes one label of  <a href=#LabelRenderer>LabelRenderer</a> </p>
+			
+			<ul class = "clearlist">
+					<li> <small>string</small> <em>text</em> -  label text </li>
+					<li> <small>Vector3</small> <em>position</em> - label position</li>
+					<li> <small>Vector2</small> <em>offset</em> -  local offset relative to position </li>
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+		
+		<div>
+			<h4   id="Dot">  <b>Dot</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> Describes one Dot of  <a href=#Dots>Dots</a> </p>
+			
+			<ul class = "clearlist">
+					<li><small>bool</small> <em>enabled</em> - dot visiblity </li>
+					<li><small>Vector3</small>  <em>position</em> - dot position</li>
+					<li> <small>Vector2</small><em>offset</em> -  local offset relative to position </li>
+					<li><small>Vector2</small> <em>size2d</em> - dot size</li>
+					<li> <small>int</small> <em>rectIndex</em> - index of rect in DotsAtlas</li>
+					<li><small>Color</small> <em>color</em> - dot color</li>
+			</ul>
+		</div>
+		
+		
+		<hr class="palehr">
+		
+		<div>
+			<h4   id="Line">  <b>Line</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> Describes one line of  <a href=#Lines>Lines</a> </p>
+			
+			<ul class = "clearlist">
+					<li> <small>Vector3</small> <em>positionA, positionB</em> - line start/end positions </li>
+					<li> <small>float</small> <em>widthA, widthB</em> - line start/end width </li>
+					<li> <small>Color</small> <em>colorA, colorB</em> -  line start/end colors  </li>
+					<li> <small>float</small> <em>textureOffsetA, textureOffsetB</em> -  line start/end textureOffset  </li>
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+		
+		<div>
+			<h4   id="PolylineVertex">  <b>PolylineVertex</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> Describes one vertex of  <a href=#Polyline>Polyline</a> </p>
+			
+			<ul class = "clearlist">
+					<li> <small>Vector3</small> <em>positionA</em> - vertex positions </li>
+					<li> <small>float</small> <em>width</em> - vertex width </li>
+					<li> <small>Color</small> <em>colorA, colorB</em> -  vertex color  </li>
+					<li> <small>float</small> <em>textureOffset </em> - vertex textureOffset  </li>
+			</ul>
+		</div>
+		
+	</div>
+ 
+  	<hr>
+ 	<!-- Enumerations -->	
+	<div>
+		<h3 id="Enumerations"> Enumerations </h3>
+ 
+		<hr class="palehr">
+		<div>
+			<h4   id="WidthMode">  <b>WidthMode</b>  <small> namespace:Linefy </small>    </h4> 
+			<p> Algorithm for calculating the width  </p>
+			
+			<ul class = "clearlist">
+					<li> <em>PixelsBillboard</em> -  Billboarded orientation, constant onscreen Width measured in pixels, perspective distortions are ignored.</li>
+					<li> <em>WorldspaceBillboard</em> -  Billboarded orientation, Width measured in world units, respects an perspective distortion.. </li>
+					<li> <em>PercentOfScreenHeight</em> -  Billboarded orientation, constant onscreen Width measured in percents of Screen.height , perspective distortions are ignored. </li>
+ 					<li> <em>WorldspaceXY</em> -  Width is measured in world units, surface oriented on Z axis (lying on XY plane). Respects perspective distortion and matrix orientation.  </li>
+
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+ 		<div>
+			<h4   id="LightingMode">  <b>LightingMode</b>  <small> namespace:Linefy </small>    </h4> 
+			<p>  The calculation of lighting data mode    </p>
+			
+			<ul class = "clearlist">
+					<li> <em>Unlit</em> -  no lighting</li>
+					<li> <em>Lit</em> -  normals </li>
+					<li> <em>NormalMapped</em> - normals and tangents  </li>
+ 
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+ 		<div>
+			<h4   id="NormalsRecalculationMode">  <b>NormalsRecalculationMode</b>  <small> namespace:Linefy </small>    </h4> 
+			<p>  Mesh normals recalculation algorithm   </p>
+			
+			<ul class = "clearlist">
+					<li> <em>Unweighted</em> </li>
+					<li> <em>Weighted</em>  </li>
+			</ul>
+		</div>
+		
+		<hr class="palehr">
+ 		<div>
+			<h4   id="SmoothingGroupsImportMode">  <b>SmoothingGroupsImportMode</b>  <small> namespace:Linefy </small>    </h4> 
+ 
+			
+			<ul class = "clearlist">
+					<li> <em>FromSource</em> - use an smoothing group data from source</li>
+					<li> <em>PerPolygon</em> -  unique smoothing group for each polygon  </li>
+					<li> <em>ForceSmoothAll</em> -  one smoothing group for all polygons </li>
+			</ul>
+		</div>
+				<hr class="palehr">
+	</div>
+ 
+	<footer>
+		 <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+	</footer>
+ 
+</div>	
+
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Using Draw Primitives</title>
+  <meta name="description" content="Linefy Documentation - Draw Primitives">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../flavicon/favicon-16x16.png">
+  <link rel="manifest" href="../flavicon//site.webmanifest">
+  <link rel="mask-icon" href="../flavicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+ 
+<body>
+<div>
+	<h4 id="Classes"> <a href=../linefy-documentation.html>Linefy Documentation</a> / Draw Primitives </h4>
+<div class="codePre">
+<pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">UnityEngine</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">Linefy.Primitives</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">Linefy.Serialization</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+<span style="color: #008000;">&#91;</span>ExecuteInEditMode<span style="color: #008000;">&#93;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> QuickStart_Primitives <span style="color: #008000;">:</span> MonoBehaviour <span style="color: #008000;">&#123;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Vector3 conePosition <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span><span style="color: #008000;">-</span><span style="color: #FF0000;">1</span>,<span style="color: #FF0000;">0</span>,<span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Vector3 coneRotation <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">45</span>,<span style="color: #FF0000;">10</span>,<span style="color: #FF0000;">60</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">float</span> coneScale <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Cone cone<span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> Vector3 boxPosition <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span>, <span style="color: #FF0000;">0</span>, <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Vector3 boxRotation <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">15</span>,<span style="color: #FF0000;">20</span>,<span style="color: #FF0000;">30</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Vector3 boxScale<span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Box box<span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">void</span> Update<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>cone <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                cone <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Cone<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span>, 1<span style="color: #008000;">.</span>5f, <span style="color: #FF0000;">32</span>, <span style="color: #FF0000;">7</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            cone<span style="color: #008000;">.</span><span style="color: #0000FF;">Draw</span><span style="color: #008000;">&#40;</span>transform<span style="color: #008000;">.</span><span style="color: #0000FF;">localToWorldMatrix</span> <span style="color: #008000;">*</span> Matrix4x4<span style="color: #008000;">.</span><span style="color: #0000FF;">TRS</span><span style="color: #008000;">&#40;</span>conePosition, Quaternion<span style="color: #008000;">.</span><span style="color: #0000FF;">Euler</span><span style="color: #008000;">&#40;</span>coneRotation<span style="color: #008000;">&#41;</span>, <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span>coneScale, coneScale, coneScale<span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>box <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                box <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Box<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">1</span>, <span style="color: #FF0000;">1</span>, <span style="color: #FF0000;">1</span>, <span style="color: #FF0000;">4</span>, <span style="color: #FF0000;">4</span>, <span style="color: #FF0000;">4</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            box<span style="color: #008000;">.</span><span style="color: #0000FF;">Draw</span><span style="color: #008000;">&#40;</span>transform<span style="color: #008000;">.</span><span style="color: #0000FF;">localToWorldMatrix</span> <span style="color: #008000;">*</span> Matrix4x4<span style="color: #008000;">.</span><span style="color: #0000FF;">TRS</span><span style="color: #008000;">&#40;</span>boxPosition, Quaternion<span style="color: #008000;">.</span><span style="color: #0000FF;">Euler</span><span style="color: #008000;">&#40;</span>boxRotation<span style="color: #008000;">&#41;</span>, <span style="color: #008000;">new</span> Vector3<span style="color: #008000;">&#40;</span>coneScale, coneScale, coneScale<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;</pre>
+</div>
+
+ 		<img src="primitives.xpng">
+
+        <footer>
+             <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+        </footer>
+</div>
+</body>
+</html>

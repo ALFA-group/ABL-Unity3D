@@ -1,0 +1,2 @@
+This folder contains the resources required for the editor scripts to work. 
+Unlike the Resources folder, this assets won't get into the build if you don't use it.

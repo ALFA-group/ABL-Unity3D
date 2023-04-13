@@ -1,0 +1,258 @@
+   		body {
+			font-family:   BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif ;
+			font-size: 1em;
+			margin: 0em;
+		}
+		
+		.toc0{
+    		width: 260px;
+ 			position: fixed;
+			background:#f5f2f0;	
+			border-right:1px solid #d5d2d0;
+			height: 100%;
+ 			top: 0;
+			left: 0;
+			margin:0;
+			padding:0;
+		}
+		
+		.logoImg{
+			width: 100%;
+		}
+		
+ 		.dImg{
+			margin:0.5em;
+		}
+		
+		.toc1 {
+			position: relative;
+			overflow-y: auto;
+			overflow-x:hidden;
+			min-height: 100%;
+			width: 100%;
+			margin:0;
+		}
+		
+		.tocLogo{
+			
+		}
+
+		.toc2 {
+		    padding-left: 0.5em;
+		    position: absolute; 
+		    top: 0;
+		    left: 0;
+		    width: 96%;
+			margin:0;
+		}
+		
+		.toc1 hr {
+ 
+ 
+			margin-top: 0.4em;
+			margin-right: 0.2em;
+			margin-bottom: 0.2em;
+			margin-left: 0.2em;
+			border-style:inset;
+ 
+		}
+
+		details{
+			border-radius: 5px;
+			border: #ddd 1px solid;
+			margin:0.5em;
+		}
+		
+		details summary{
+			margin: 2px 2px 2px 12px;
+		}
+		
+		details summary::after{
+			background-color:red;
+			margin: 2px 2px 2px 12px;
+		}
+		
+		*:focus {
+		  outline: none;
+		}
+		
+		details img {
+			margin: 5px 5px 5px 5px;
+		}
+ 
+		.toc0 ul{
+			margin-block-start: 0.1em;
+			margin-block-end: 0.1em;
+			padding-inline-start: 0.7em;
+			list-style: none;
+		}
+		
+ 		.content {
+			position: absolute;
+			background-color: white;
+			left: 260px;
+			width: 1050px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			list-style: disc;
+			margin-top:0em;
+			margin-bottom:0em;
+		}
+		
+		ul, ol{
+			margin-block-start: 0.5em;
+			margin-block-end: 0.5em;
+		}
+		
+		h3 {
+			font-size: 1.8em;
+			font-weight: normal;
+			margin-block-start: 0.5em;
+			margin-block-end: 0.5em;
+		}
+		
+		h4 {
+			font-size: 1.4em;
+			font-weight: normal;
+			margin-block-start: 0.4em;
+			margin-block-end: 0.4em;
+		}
+		
+		h4 small {
+			background-color:none;
+			font-size:0.6em;
+		}
+ 
+		
+		div {
+			margin:0 0 0 1em;
+			padding:0em;
+		}
+		
+		p{
+			margin:0.0em 0.0em 0.0em 1em;
+		}
+		
+		.codeSnippet{
+			border-radius: 4px;
+			padding-left:2px;
+			padding-right:2px;
+			font-size:0.9em;
+			font-family: Consolas,Monaco,'Andale Mono',monospace;
+			background-color:AntiqueWhite;
+			margin: 1px 1px 1px 1px;
+			border: #ddd 1px solid;
+			color: #455463;
+		}
+		
+		.warning {
+			background-image: url(warning.xpng);
+			background-repeat: no-repeat;
+			padding: 0.4em;
+			background-size: 2em;
+			background-position-x: .2em;
+			color: #000000;
+			text-indent:2em;
+		}
+		
+		.example {
+			background-image: url(example.xpng);
+			background-repeat: no-repeat;
+			padding: 0.4em;
+			background-size: 2em;
+			background-position-x: .2em;
+			color: #000000;
+			text-indent:2em;
+		}
+		
+/* 		i {
+			font-style:normal;
+			font-family: Consolas,Monaco,'Andale Mono',monospace;
+			color: darkviolet;
+			font-size: 0.9em;
+			background-color: beige;
+		} */
+		
+		hr{
+			margin:1em;
+		}
+		
+		.palehr{
+			border-top: 1px dotted black;
+		}
+		
+		b{
+			font-family: Consolas,Monaco,'Andale Mono',monospace;
+			font-weight:normal;
+			color:#2300e2;
+			margin-block-start:10px;
+			font-size:1.0em;
+		}
+		
+		em{
+			font-family: Consolas,Monaco,'Andale Mono',monospace;
+			font-weight:normal;
+			font-style: normal;
+			color: #ff0000c2;
+			margin-block-start:10px;
+			font-size:1em;
+ 		}
+		
+		small{
+			font-family: Consolas,Monaco,'Andale Mono',monospace;
+			color: #00000069;
+			
+		}
+		
+		.method{
+
+			background-color: none;
+			padding-left:0em;
+			padding-bottom:0.5em;
+			padding-top:0.5em;
+		}  
+		
+		.methodString{
+			margin:0em;
+			background-color: none;
+			padding-left:0em;
+			padding-right:0em;
+			padding-bottom:0.25em;
+			padding-top:0.25em;
+		} 
+		
+		.clearlist{
+			list-style: none;
+			margin:0em;
+		}
+		
+		a, a:visited{
+		  color: initial;
+		}
+		
+		h4 a {
+			text-decoration:none;
+		}
+		
+		.codePre {
+			border-radius: 4px;
+ 			padding:10px;
+			margin:0px;
+			font-size:0.9em;
+			font-family: Consolas,Monaco,'Andale Mono',monospace;
+			background-color:AntiqueWhite;
+			margin: 5px 5px 5px 5px;
+			border: #ddd 1px solid;
+			color: #455463;
+		}
+		
+		
+		footer {
+ 
+			font-size: 1em;
+			padding:1em;
+			text-align:center;
+ 
+		}
+ 

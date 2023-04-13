@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Draw In Editor Window example </title>
+  <meta name="description" content="Linefy Documentation - Draw In Editor Window example">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../flavicon/favicon-16x16.png">
+  <link rel="manifest" href="../flavicon//site.webmanifest">
+  <link rel="mask-icon" href="../flavicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+ 
+<body>
+<div>
+	<h4 id="Classes"> <a href=../linefy-documentation.html>Linefy Documentation</a> / Draw In Editor Window example </h4>
+
+ 
+
+<div class="codePre">
+<pre class="cpp" style="font-family:monospace;"><span style="color: #0000ff;">using</span> System.<span style="color: #007788;">Collections</span><span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> System.<span style="color: #007788;">Collections</span>.<span style="color: #007788;">Generic</span><span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> UnityEngine<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> UnityEditor<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> Linefy<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> Linefy.<span style="color: #007788;">Primitives</span><span style="color: #008080;">;</span>
+&nbsp;
+<span style="color: #0000ff;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> DrawInEditorWindow <span style="color: #008080;">:</span> MonoBehaviour <span style="color: #008000;">&#123;</span>
+        <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> CustomEditorWindow <span style="color: #008080;">:</span> EditorWindow <span style="color: #008000;">&#123;</span>
+&nbsp;
+            EditorGUIViewport viewport<span style="color: #008080;">;</span>
+            CircularPolyline circle<span style="color: #008080;">;</span>
+&nbsp;
+            <span style="color: #008000;">&#91;</span>MenuItem<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">&quot;Window/Linefy Draw In Editor Window Example&quot;</span>, <span style="color: #0000ff;">false</span>, <span style="color: #0000dd;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+            <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span> OpenCustomWindow<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                EditorWindow.<span style="color: #007788;">GetWindow</span><span style="color: #008000;">&#40;</span>typeof<span style="color: #008000;">&#40;</span>CustomEditorWindow<span style="color: #008000;">&#41;</span>, <span style="color: #0000ff;">false</span>, <span style="color: #FF0000;">&quot;Draw In Editor Window Example&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+            <span style="color: #008000;">&#125;</span>
+&nbsp;
+            <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span> OnEnable<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                viewport <span style="color: #000080;">=</span> <span style="color: #0000dd;">new</span> EditorGUIViewport<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                circle <span style="color: #000080;">=</span> <span style="color: #0000dd;">new</span> CircularPolyline<span style="color: #008000;">&#40;</span><span style="color: #0000dd;">3</span>, <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">new</span> Linefy.<span style="color: #007788;">Serialization</span>.<span style="color: #007788;">SerializationData_Polyline</span><span style="color: #008000;">&#40;</span><span style="color: #0000dd;">2</span>, Color.<span style="color: #007788;">green</span>, <span style="color: #0000dd;">1</span>, <span style="color: #0000ff;">true</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+            <span style="color: #008000;">&#125;</span>
+&nbsp;
+            <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span> OnGUI<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                Repaint<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                <span style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>Event.<span style="color: #007788;">current</span>.<span style="color: #007788;">type</span> <span style="color: #000080;">==</span> EventType.<span style="color: #007788;">Repaint</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                    Rect r <span style="color: #000080;">=</span> <span style="color: #0000dd;">new</span> Rect<span style="color: #008000;">&#40;</span><span style="color: #0000dd;">8</span>, <span style="color: #0000dd;">8</span>, position.<span style="color: #007788;">width</span> <span style="color: #000040;">-</span> <span style="color: #0000dd;">16</span>, position.<span style="color: #007788;">height</span> <span style="color: #000040;">-</span> <span style="color: #0000dd;">16</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                    <span style="color: #0000ff;">float</span> maxSize <span style="color: #000080;">=</span> Mathf.<span style="color: #007788;">Min</span><span style="color: #008000;">&#40;</span>r.<span style="color: #007788;">width</span>, r.<span style="color: #007788;">height</span><span style="color: #008000;">&#41;</span> <span style="color: #000040;">*</span> <span style="color:#800080;">0.48f</span><span style="color: #008080;">;</span>
+                    viewport.<span style="color: #007788;">SetParams</span><span style="color: #008000;">&#40;</span>r<span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                    <span style="color: #0000ff;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #0000ff;">int</span> i <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> <span style="color: #0000dd;">36</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                        Matrix4x4 <span style="color: #0000ff;">tm</span> <span style="color: #000080;">=</span> Matrix4x4.<span style="color: #007788;">TRS</span><span style="color: #008000;">&#40;</span>viewport.<span style="color: #007788;">GUItoLocalSpace</span><span style="color: #008000;">&#40;</span>r.<span style="color: #007788;">center</span><span style="color: #008000;">&#41;</span>, Quaternion.<span style="color: #007788;">Euler</span><span style="color: #008000;">&#40;</span><span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">0</span>,  i <span style="color: #000040;">*</span> <span style="color:#800080;">120f</span> <span style="color: #000040;">/</span> <span style="color: #0000dd;">36</span><span style="color: #008000;">&#41;</span>, Vector3.<span style="color: #007788;">one</span> <span style="color: #000040;">*</span> maxSize<span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                        viewport.<span style="color: #007788;">DrawLocalSpace</span><span style="color: #008000;">&#40;</span>circle, <span style="color: #0000ff;">tm</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                    <span style="color: #008000;">&#125;</span>
+                    viewport.<span style="color: #007788;">backgroundColor</span> <span style="color: #000080;">=</span> <span style="color: #0000dd;">new</span> Color<span style="color: #008000;">&#40;</span><span style="color:#800080;">0.4f</span>, <span style="color:#800080;">0.4f</span>, <span style="color:#800080;">0.4f</span>, <span style="color:#800080;">1f</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                    viewport.<span style="color: #007788;">Render</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                <span style="color: #008000;">&#125;</span>
+            <span style="color: #008000;">&#125;</span>
+&nbsp;
+            <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span> OnDisable<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                viewport.<span style="color: #007788;">Dispose</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                circle.<span style="color: #007788;">Dispose</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+            <span style="color: #008000;">&#125;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span></pre>
+
+</div>
+
+	<footer>
+		 <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+	</footer>
+</div>
+</body>
+</html>

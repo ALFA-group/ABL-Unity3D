@@ -1,0 +1,4 @@
+This folder contains Linefy`s vital resources: 
+1) Default font
+2) Default DotsAtlas.
+3) Shaders

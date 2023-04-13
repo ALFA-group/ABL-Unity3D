@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e62e3fbeea487545a1dd23fb70ff0de, type: 3}
+  m_Name: PlexusPoints
+  m_EditorClassIdentifier: 
+  texture: {fileID: 2800000, guid: bc4d580d242c7dc4487028a1f4b64765, type: 3}
+  xCount: 4
+  yCount: 2
+  rectPixelSize: {x: 128, y: 128}
+  settingsString: 8 rects  128x128 pixels
+  settingsHash: 2123128543
+  fontSettingsHash: 0
+  flipVertical: 0
+  rects:
+  - v0: {x: 0, y: 0.5}
+    v1: {x: 0, y: 1}
+    v2: {x: 0.25, y: 1}
+    v3: {x: 0.25, y: 0.5}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0.25, y: 0.5}
+    v1: {x: 0.25, y: 1}
+    v2: {x: 0.5, y: 1}
+    v3: {x: 0.5, y: 0.5}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0.5, y: 0.5}
+    v1: {x: 0.5, y: 1}
+    v2: {x: 0.75, y: 1}
+    v3: {x: 0.75, y: 0.5}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0.75, y: 0.5}
+    v1: {x: 0.75, y: 1}
+    v2: {x: 1, y: 1}
+    v3: {x: 1, y: 0.5}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0, y: 0}
+    v1: {x: 0, y: 0.5}
+    v2: {x: 0.25, y: 0.5}
+    v3: {x: 0.25, y: 0}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0.25, y: 0}
+    v1: {x: 0.25, y: 0.5}
+    v2: {x: 0.5, y: 0.5}
+    v3: {x: 0.5, y: 0}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0.5, y: 0}
+    v1: {x: 0.5, y: 0.5}
+    v2: {x: 0.75, y: 0.5}
+    v3: {x: 0.75, y: 0}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - v0: {x: 0.75, y: 0}
+    v1: {x: 0.75, y: 0.5}
+    v2: {x: 1, y: 0.5}
+    v3: {x: 1, y: 0}
+    bounds:
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  isFontAtlas: 0
+  whitespaceWidth: 4
+  horizontalSpacing: 2
+  monowidth: 0
+  enableRemappingIndexTable: 0
+  remappingIndexTable: 
+  background9SliseIndices:
+    topLeft: 0
+    top: 1
+    topRight: 2
+    left: 8
+    center: 9
+    right: 10
+    bottomLeft: 16
+    bottom: 17
+    bottomRight: 18

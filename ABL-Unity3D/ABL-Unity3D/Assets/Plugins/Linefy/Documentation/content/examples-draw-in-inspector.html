@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Draw In Inspector example </title>
+  <meta name="description" content="Linefy Documentation - Draw In Inspector">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../flavicon/favicon-16x16.png">
+  <link rel="manifest" href="../flavicon//site.webmanifest">
+  <link rel="mask-icon" href="../flavicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+ 
+<body>
+<div>
+	<h4 id="Classes"> <a href=../linefy-documentation.html>Linefy Documentation</a> /Draw In Inspectorexample   </h4>
+
+<p> Runtime script</p>
+
+<div class="codePre">
+<pre class="cpp" style="font-family:monospace;"><span style="color: #0000ff;">using</span> UnityEngine<span style="color: #008080;">;</span>
+&nbsp;
+<span style="color: #0000ff;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> DrawInInspectorExample <span style="color: #008080;">:</span> MonoBehaviour <span style="color: #008000;">&#123;</span>
+        <span style="color: #008000;">&#91;</span>Range<span style="color: #008000;">&#40;</span><span style="color:#800080;">0.1f</span>, <span style="color: #0000dd;">10</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+        <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">float</span> zoom <span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span>
+        <span style="color: #0000ff;">public</span> Vector2 pan<span style="color: #008080;">;</span>
+        <span style="color: #0000ff;">public</span> Color backgroundColor <span style="color: #000080;">=</span> Color.<span style="color: #007788;">clear</span><span style="color: #008080;">;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span>
+</div>
+
+<p> Editor script </p>
+<div class="codePre">
+<pre class="cpp" style="font-family:monospace;"><span style="color: #0000ff;">using</span> Linefy<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> Linefy.<span style="color: #007788;">Primitives</span><span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> UnityEngine<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> UnityEditor<span style="color: #008080;">;</span>
+<span style="color: #0000ff;">using</span> Linefy.<span style="color: #007788;">Internal</span><span style="color: #008080;">;</span>
+&nbsp;
+<span style="color: #0000ff;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+    <span style="color: #008000;">&#91;</span>CustomEditor<span style="color: #008000;">&#40;</span>typeof<span style="color: #008000;">&#40;</span>DrawInInspectorExample<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> DrawInInspectorExampleEditor <span style="color: #008080;">:</span> Editor <span style="color: #008000;">&#123;</span>
+        EditorGUIViewport viewport<span style="color: #008080;">;</span>
+        Grid2d _localGrid<span style="color: #008080;">;</span>
+        Grid2d localGrid<span style="color: #008080;">;</span>
+&nbsp;
+        <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span> OnEnable<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            localGrid <span style="color: #000080;">=</span> <span style="color: #0000dd;">new</span> Grid2d<span style="color: #008000;">&#40;</span><span style="color: #0000dd;">100</span>, <span style="color: #0000dd;">100</span>, <span style="color: #0000dd;">10</span>, <span style="color: #0000dd;">10</span>, <span style="color: #0000ff;">false</span>, <span style="color: #0000dd;">new</span> Linefy.<span style="color: #007788;">Serialization</span>.<span style="color: #007788;">SerializationData_LinesBase</span><span style="color: #008000;">&#40;</span><span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">new</span> Color<span style="color: #008000;">&#40;</span><span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">0</span>, <span style="color:#800080;">0.5f</span><span style="color: #008000;">&#41;</span>, <span style="color: #0000dd;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+            viewport <span style="color: #000080;">=</span> <span style="color: #0000dd;">new</span> EditorGUIViewport<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span> OnInspectorGUI<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            DrawInInspectorExample t <span style="color: #000080;">=</span> target as DrawInInspectorExample<span style="color: #008080;">;</span>
+            Rect inspectorRect <span style="color: #000080;">=</span> EditorGUILayout.<span style="color: #007788;">GetControlRect</span><span style="color: #008000;">&#40;</span><span style="color: #0000ff;">false</span>, <span style="color: #0000dd;">300</span><span style="color: #008000;">&#41;</span>.<span style="color: #007788;">Inflate</span><span style="color: #008000;">&#40;</span><span style="color: #000040;">-</span><span style="color: #0000dd;">8</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+            <span style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>Event.<span style="color: #007788;">current</span>.<span style="color: #007788;">type</span> <span style="color: #000080;">==</span> EventType.<span style="color: #007788;">Repaint</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                viewport.<span style="color: #007788;">backgroundColor</span> <span style="color: #000080;">=</span> t.<span style="color: #007788;">backgroundColor</span><span style="color: #008080;">;</span>
+                viewport.<span style="color: #007788;">SetParams</span><span style="color: #008000;">&#40;</span>inspectorRect, t.<span style="color: #007788;">zoom</span>, t.<span style="color: #007788;">pan</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                viewport.<span style="color: #007788;">DrawLocalSpace</span><span style="color: #008000;">&#40;</span>localGrid, Matrix4x4.<span style="color: #007788;">identity</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                viewport.<span style="color: #007788;">Render</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            DrawDefaultInspector<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span> OnDestroy<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            <span style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>viewport <span style="color: #000040;">!</span><span style="color: #000080;">=</span> null<span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                viewport.<span style="color: #007788;">Dispose</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                viewport <span style="color: #000080;">=</span> null<span style="color: #008080;">;</span>
+            <span style="color: #008000;">&#125;</span>
+&nbsp;
+            <span style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>_localGrid <span style="color: #000040;">!</span><span style="color: #000080;">=</span> null<span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                _localGrid.<span style="color: #007788;">Dispose</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+                _localGrid <span style="color: #000080;">=</span> null<span style="color: #008080;">;</span>
+            <span style="color: #008000;">&#125;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span></pre>
+
+</div>
+
+	<footer>
+		 <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+	</footer>
+</div>
+</body>
+</html>

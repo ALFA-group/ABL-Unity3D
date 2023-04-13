@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: 'GraphLayout/GraphLayout.sln'
+    feedsToUse: 'select'
+- task: MSBuild@1
+  inputs:
+    solution: 'GraphLayout/GraphLayout.sln'
+    msbuildArchitecture: 'x64'
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'MSAGLRelease'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
+    tag: 'MSAGL-Build'
+    title: 'Latest build'
+    isPreRelease: true
+    changeLogCompareToRelease: 'lastNonDraftRelease'
+    changeLogType: 'commitBased'
+

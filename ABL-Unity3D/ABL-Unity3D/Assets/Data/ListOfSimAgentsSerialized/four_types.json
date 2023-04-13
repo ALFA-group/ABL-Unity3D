@@ -1,0 +1,924 @@
+[
+
+  {
+    "commandElement": 5,
+    "team": 2,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 0,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.001,
+                "damagePerSecondVsTypeB": 0.001 ,
+                "damagePerSecondVsTypeC": 0.001 ,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": -0.13,
+      "y": 0.5
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 1,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 1,
+      "IsValid": true
+    },
+    "Name": "TypeA-Sample1"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 2,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 1,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.001 ,
+                "damagePerSecondVsTypeB": 0.001,
+                "damagePerSecondVsTypeC": 0.001 ,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 10.25,
+      "y": 0.52
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 2,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 2,
+      "IsValid": true
+    },
+    "Name": "TypeB-Sample2"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 2,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 2,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA":  0.001 ,
+                "damagePerSecondVsTypeB": 0.001 ,
+                "damagePerSecondVsTypeC": 0.001,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": -14.92,
+      "y": 12.23
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 3,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 3,
+      "IsValid": true
+    },
+    "Name": "TypeC-Sample3"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 2,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 3,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.001 ,
+                "damagePerSecondVsTypeB": 0.001 ,
+                "damagePerSecondVsTypeC": 0.001 ,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": -9.85,
+      "y": -7.9
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 4,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 4,
+      "IsValid": true
+    },
+    "Name": "TypeD-Sample4"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 2,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 0,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.001,
+                "damagePerSecondVsTypeB": 0.001 ,
+                "damagePerSecondVsTypeC": 0.001 ,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 14.74,
+      "y": 13.32
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 5,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 5,
+      "IsValid": true
+    },
+    "Name": "TypeA-Sample5"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 0,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.001,
+                "damagePerSecondVsTypeB": 0.00025 ,
+                "damagePerSecondVsTypeC": 0.00025 ,
+                "damagePerSecondVsTypeD": 0.00025
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 24,
+      "y": 1.71
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 6,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 6,
+      "IsValid": true
+    },
+    "Name": "TypeA-Sample6"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 1,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.00025 ,
+                "damagePerSecondVsTypeB": 0.001,
+                "damagePerSecondVsTypeC": 0.00025 ,
+                "damagePerSecondVsTypeD": 0.00025
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 24,
+      "y": 4.16
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 7,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 7,
+      "IsValid": true
+    },
+    "Name": "TypeB-Sample7"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 2,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA":  0.00025 ,
+                "damagePerSecondVsTypeB": 0.00025 ,
+                "damagePerSecondVsTypeC": 0.001,
+                "damagePerSecondVsTypeD": 0.00025
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 26.5,
+      "y": -0.69
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 8,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 8,
+      "IsValid": true
+    },
+    "Name": "TypeC-Sample8"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 3,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.00025 ,
+                "damagePerSecondVsTypeB": 0.00025 ,
+                "damagePerSecondVsTypeC": 0.00025 ,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 24,
+      "y": -3.09
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 9,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 9,
+      "IsValid": true
+    },
+    "Name": "TypeD-Sample9"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 0,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.001,
+                "damagePerSecondVsTypeB": 0.00025 ,
+                "damagePerSecondVsTypeC": 0.00025 ,
+                "damagePerSecondVsTypeD": 0.00025
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 26.5,
+      "y": 1.71
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 10,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 10,
+      "IsValid": true
+    },
+    "Name": "TypeA-Sample10"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 1,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.00025 ,
+                "damagePerSecondVsTypeB": 0.001,
+                "damagePerSecondVsTypeC": 0.00025 ,
+                "damagePerSecondVsTypeD": 0.00025
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 26.5,
+      "y": 4.16
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 11,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 11,
+      "IsValid": true
+    },
+    "Name": "TypeB-Sample11"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 2,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA":  0.00025 ,
+                "damagePerSecondVsTypeB": 0.00025 ,
+                "damagePerSecondVsTypeC": 0.001,
+                "damagePerSecondVsTypeD": 0.00025
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 24,
+      "y": -0.69
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 12,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 12,
+      "IsValid": true
+    },
+    "Name": "TypeC-Sample12"
+  },
+
+  {
+    "commandElement": 5,
+    "team": 1,
+    "kmVisualRange": 2.0,
+    "kphMaxSpeed": 30.0,
+    "mapHeadingInDegrees": 0.0,
+    "entities": [
+      {
+        "count": 12,
+        "damage": 0.0,
+        "data": {
+          "isSimAgentTypeCertain": true,
+          "kmVisualRange": 2.0,
+          "kphMaxSpeed": 30.0,
+          "maxHealth": 1.0,
+          "name": "sample",
+          "simAgentType": 3,
+          "weapons": [
+            {
+              "name": "sample",
+              "munitionName": "sample",
+              "kmMaxRange": 0.15,
+              "kmMinRange": 0.0,
+              "secondsOfAmmo": 3600.0,
+              "isIndirect": false,
+              "kmStrikeRadius": 0.0,
+              "numSimultaneouslyFiring": 1,
+              "numRounds": 3,
+              "damage": {
+                "name": "sample",
+                "damagePerSecondVsTypeA": 0.00025 ,
+                "damagePerSecondVsTypeB": 0.00025 ,
+                "damagePerSecondVsTypeC": 0.00025 ,
+                "damagePerSecondVsTypeD": 0.001
+              },
+              "IsArtillery": false
+            }
+          ]
+        },
+        "ActiveCount": 12.0,
+        "IsActive": true,
+        "MaxHealth": 12.0,
+        "CurrentHealth": 12.0,
+        "CanFire": true,
+        "HasWeapons": true
+      }
+    ],
+    "positionActual": {
+      "x": 26.5,
+      "y": -3.09
+    },
+    "IsDestroyed": false,
+    "IsDamaged": false,
+    "CanFire": true,
+    "IsUav": false,
+    "IsActive": true,
+    "CanMove": true,
+    "Handle": {
+      "simId": {
+        "id": 13,
+        "IsValid": true
+      },
+      "IsValid": true
+    },
+    "SimId": {
+      "id": 13,
+      "IsValid": true
+    },
+    "Name": "TypeD-Sample13"
+  }]

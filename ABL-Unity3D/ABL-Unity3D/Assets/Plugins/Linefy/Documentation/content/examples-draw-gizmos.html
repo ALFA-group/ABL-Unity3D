@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Draw Gizmos example </title>
+  <meta name="description" content="Linefy Documentation - Draw Gizmos ">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../flavicon/favicon-16x16.png">
+  <link rel="manifest" href="../flavicon//site.webmanifest">
+  <link rel="mask-icon" href="../flavicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+ 
+<body>
+<div>
+	<h4 id="Classes"> <a href=../linefy-documentation.html>Linefy Documentation</a> / Draw in Scene view example   </h4>
+<div class="codePre">
+
+<pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">UnityEngine</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> DrawGizmosExample <span style="color: #008000;">:</span> MonoBehaviour <span style="color: #008000;">&#123;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">public</span> Color gizmoColor <span style="color: #008000;">=</span> Color<span style="color: #008000;">.</span><span style="color: #0000FF;">white</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Color selectedGizmoColor <span style="color: #008000;">=</span> Color<span style="color: #008000;">.</span><span style="color: #0000FF;">red</span><span style="color: #008000;">;</span>
+        <span style="color: #0600FF; font-weight: bold;">public</span> Texture gizmosTexture<span style="color: #008000;">;</span>
+&nbsp;
+        Linefy<span style="color: #008000;">.</span><span style="color: #0000FF;">Primitives</span><span style="color: #008000;">.</span><span style="color: #0000FF;">CircularPolyline</span> gizmoCircle<span style="color: #008000;">;</span>
+        Linefy<span style="color: #008000;">.</span><span style="color: #0000FF;">Primitives</span><span style="color: #008000;">.</span><span style="color: #0000FF;">CircularPolyline</span> gizmoSelectedCircle<span style="color: #008000;">;</span>
+&nbsp;
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnDrawGizmos<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            Gizmos<span style="color: #008000;">.</span><span style="color: #0000FF;">matrix</span> <span style="color: #008000;">=</span> transform<span style="color: #008000;">.</span><span style="color: #0000FF;">localToWorldMatrix</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>gizmoCircle <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                gizmoCircle <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Linefy<span style="color: #008000;">.</span><span style="color: #0000FF;">Primitives</span><span style="color: #008000;">.</span><span style="color: #0000FF;">CircularPolyline</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">64</span>, <span style="color: #FF0000;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                gizmoCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">wireframeProperties</span><span style="color: #008000;">.</span><span style="color: #0000FF;">widthMultiplier</span> <span style="color: #008000;">=</span> <span style="color: #FF0000;">5</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            gizmoCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">wireframeProperties</span><span style="color: #008000;">.</span><span style="color: #0000FF;">colorMultiplier</span> <span style="color: #008000;">=</span> gizmoColor<span style="color: #008000;">;</span>
+            gizmoCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">DrawNow</span><span style="color: #008000;">&#40;</span>Gizmos<span style="color: #008000;">.</span><span style="color: #0000FF;">matrix</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnDrawGizmosSelected<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            Gizmos<span style="color: #008000;">.</span><span style="color: #0000FF;">matrix</span> <span style="color: #008000;">=</span> transform<span style="color: #008000;">.</span><span style="color: #0000FF;">localToWorldMatrix</span><span style="color: #008000;">;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>gizmoSelectedCircle <span style="color: #008000;">==</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                gizmoSelectedCircle <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Linefy<span style="color: #008000;">.</span><span style="color: #0000FF;">Primitives</span><span style="color: #008000;">.</span><span style="color: #0000FF;">CircularPolyline</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">64</span>, 1<span style="color: #008000;">.</span>1f<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                gizmoSelectedCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">wireframeProperties</span><span style="color: #008000;">.</span><span style="color: #0000FF;">widthMultiplier</span> <span style="color: #008000;">=</span> <span style="color: #FF0000;">3</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+            gizmoSelectedCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">wireframeProperties</span><span style="color: #008000;">.</span><span style="color: #0000FF;">colorMultiplier</span> <span style="color: #008000;">=</span> selectedGizmoColor<span style="color: #008000;">;</span>
+            gizmoSelectedCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">wireframeProperties</span><span style="color: #008000;">.</span><span style="color: #0000FF;">textureScale</span> <span style="color: #008000;">=</span> <span style="color: #FF0000;">40</span><span style="color: #008000;">;</span>
+            gizmoSelectedCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">wireframeProperties</span><span style="color: #008000;">.</span><span style="color: #0000FF;">texture</span> <span style="color: #008000;">=</span> gizmosTexture<span style="color: #008000;">;</span>
+            gizmoSelectedCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">DrawNow</span><span style="color: #008000;">&#40;</span>Gizmos<span style="color: #008000;">.</span><span style="color: #0000FF;">matrix</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnDisable<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            <span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>gizmoCircle <span style="color: #008000;">!=</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+                gizmoCircle<span style="color: #008000;">.</span><span style="color: #0000FF;">Dispose</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+                gizmoCircle <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">null</span><span style="color: #008000;">;</span>
+            <span style="color: #008000;">&#125;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span>
+&nbsp;</pre>
+
+</div>
+
+	<footer>
+		 <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Linefy 1.1 documentation </title>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+			body {
+				font-family: Helvetica, Arial, sans-serif;
+ 			}
+
+			.toc0{
+    			width: 250px;
+ 				position: fixed;
+				background:#f5f2f0;	
+				border-right:1px solid #d5d2d0;
+				height: 100%;
+ 				top: 0;
+				left: 0;
+			}
+			
+			.toc0 img{
+				padding:4px;
+			}
+
+			.toc1 {
+				position: relative;
+				overflow: auto;
+				min-height: 100%;
+				width: 100%;
+			}
+
+			.toc2 {
+			    padding:4px;
+			    position: absolute; 
+			    top: 0;
+			    left: 0;
+			    width: 96%;
+			}
+			
+			.toc0 hr{
+				border-top: 1px dotted black;
+				margin-block-start:4px;
+				margin-block-end:4px;
+			}
+
+			a{
+				text-decoration: none; 
+				color: #0000ff;
+				margin:2px;
+			}
+
+			a:link{
+				color: #0000ff;
+			}
+
+			  a:hover{
+			    text-decoration: underline; 
+ 
+
+			}
+			  a:focus{
+				color: #ff5500;
+
+			}
+			  a:active{
+				color: red;
+
+			}
+
+			.content {
+				position: absolute;
+				background-color: white;
+				left: 260px;
+				width: 1050px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			li{
+				list-style-type: none;
+				margin: 0px;
+				padding:0px;
+			}
+
+			ul{
+				list-style-type: none;
+				margin: 0;
+				padding-left: 12;
+ 
+			}
+
+			details{
+				 
+				border-radius: 5px;
+				border: #ddd 1px solid;
+				margin-block-start:10px;
+			}
+			
+			details summary{
+				margin: 2px 2px 2px 12px;
+			}
+			
+			details img {
+				margin: 5px 5px 5px 5px;
+			}
+
+			details  pre{
+				border-radius: 4px;
+ 				padding:10px;
+				margin:0px;
+				font-size:0.9em;
+				font-family: Consolas,Monaco,'Andale Mono',monospace;
+				background-color:AntiqueWhite;
+				margin: 5px 5px 5px 5px;
+				border: #ddd 1px solid;
+				color: #455463;
+			}
+			
+			.content ul{
+				padding-left:3em;
+			}
+			
+			.content li{
+				list-style-type: square;
+				padding-bottom:0.3em;
+ 			    list-style-type: disc;
+			}
+			
+			p ul {
+				display: block;
+				list-style-type: disc;
+				margin-block-start: 1em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				padding-inline-start: 10px;
+			}
+			
+			.content p{
+				padding-left:3em;
+			}
+			
+			.content h3{
+				padding-left:1em;
+				font-weight:normal;
+				font-size:1.5em;
+				margin-block-end: 0.5em;
+				margin-block-start: 0.5em;
+			}
+			
+			.content h4{
+				padding-left:1em;
+				font-weight:normal;
+				font-size:1.25em;
+				margin-block-end: 0.5em;
+				margin-block-start: 0.5em;
+			}
+			
+ 			.method{
+				background-color: none;
+				padding-left:3em;
+				padding-bottom:1.5em;
+		
+			}
+			
+			.method strong{
+				font-family: Consolas,Monaco,'Andale Mono',monospace;
+				font-weight:bold;
+				color:#6e71cc;
+				margin-block-start:10px;
+			}
+			
+			.method b{
+				font-family: Consolas,Monaco,'Andale Mono',monospace;
+				font-weight:normal;
+				font-style: normal;
+				color: #00000069;
+				font-size:0.8em;
+			}
+			
+			.method em{
+				font-family: Consolas,Monaco,'Andale Mono',monospace;
+				font-weight:bold;
+				font-style: normal;
+				color: #0080ff8c;
+				margin-block-start:10px;
+ 
+			}
+			
+			.method ul{
+				padding-top: 0.25em;
+				padding-bottom: 0.5em;
+				padding-left:1.5em;
+			}
+			
+			.method li{
+				list-style: none;
+				padding :0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+ 
+	<div class ="toc0">
+		<img src="linefy-logo-transparent.xpng"> 
+		<div class ="toc1">
+			<div class="toc2">
+
+				<ul >
+					<li><a href="#Overview">Overview</a></li>
+				</ul>
+ 		 		<hr>
+		 		<ul >
+					<li><a href="#HowToDraw">How to draw</a> 
+						<ul>  
+							<li><a href="#DrawRuntime">Runtime</a> </li>
+							<li><a href="#DrawSceneView">Scene view</a> </li>
+							<li><a href="#DrawGizmos">Gizmos</a> </li>
+							<li><a href="#DrawInspector">Inspector</a> </li>
+							<li><a href="#EditorWindow">EditorWindow</a> </li>
+						</ul>
+					</li>
+				</ul>
+		 
+				<hr>
+				
+				<li> Classes hierarchy:
+					<ul>
+						<li> <a href="#CreatePCPA">LinefyEntity:</a> 
+							<ul>
+								<li> <a href="#PCPP_mesh">PolygonalMesh </a> </li>
+								<li> <a href="#PCPP_mesh">LabelsRenderer </a> </li>
+								<li> <a href="#PCPP_mesh">LinefyDrawCall </a> 
+									<ul>
+										<li> <a href="#PCPP_mesh">PrimitivesGroup </a> 
+											<ul>
+												<li> <a href="#PCPP_mesh">Dots </a> </li>
+												<li> <a href="#PCPP_mesh">Lines Base </a> 
+													<ul>
+														<li> <a href="#PCPP_mesh">Lines </a> </li>
+														<li> <a href="#PCPP_mesh">Polyline </a> </li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							
+						</li> 
+					</ul>
+				</li>
+ 
+				<hr>
+			
+				<ul>
+					<li>  EditorHandles: 
+						<ul>  
+							<li><a href="#Overview">Vector3Handle</a> </li>
+							<li><a href="#Overview">Vector3HandlesArray</a> </li>
+							<li><a href="#Overview">Matrix4x4Handle</a> </li>
+	 
+						</ul>
+					</li>
+				</ul>
+				
+				<hr>
+				
+				<ul >
+					<li> MonoBehaviour:
+						<ul>
+							<li> <a href="#Overview">LinefyLabelsRenderer</a> </li>
+							<li> <a href="#Overview">Grid3d </a> </li>  
+							<li> <a href="#Overview">NearClipPlaneMatrix </a> </li>
+						</ul>
+					</li>
+ 				</ul >
+				
+				<hr>
+				
+				<ul >
+ 					<li> ScriptableObject:
+						<ul>
+							<li> <a href="#Overview">DotsAtlas</a> </li>
+							<li> <a href="#Overview">PolygonalMesh </a> </li>  
+	 
+						</ul>
+					</li>
+				</ul >
+				
+				<hr>
+				
+				<ul >
+ 					<li> Structures:
+						<ul>
+							<li> <a href="#Line">Line</a> </li>
+							<li> <a href="#PolylineVertex">PolylineVertex </a> </li>  
+							<li> <a href="#Dot">Dot</a> </li> 
+						</ul>
+					</li>
+				</ul >
+				
+			</div>
+		</div>
+	</div>
+
+	<div class ="content">
+ 
+		<h3 id="Overview">  Overview   </h3>
+		<p> 
+			Linefy is a versatile, cross-platform, GPU-powered graphics library for 
+			drawing colored, textured lines, polylines, points and meshes in screen and world spaces. 
+		</p>
+
+		<h4 id="features">Features</h4>
+		<ul>
+			<li>Draw everywhere: Runtime, Scene view, Gizmos, inside Inspectors and Editor windows</li>
+			<li>Fastest dynamic drawing with zero allocations.</li>
+			<li>Lighting-fast static drawing with zero CPU usage.</li>
+			<li>Cross-platform: mobile, WebGL, VR.</li>
+			<li>Render-pipeline independent.</li>
+			<li>PostProcessing is supported.</li>
+			<li>Per-vertex adjustable: colors, width, texture coordinates.</li>
+			<li>Antialiasing without Multisampling and post-effects.</li>
+			<li>Import polygonal meshes with quad wireframe.</li>
+			<li>Custom Matrix4x4 and Vector3 handles.</li>
+			<li>Pixel Perfect Bitmap Fonts rendering.</li>
+			<li>Clear and simple API. Full C# code included.</li>
+			<li>No dependencies</li>
+			<li>Over 15 demo scenes included.</li>
+		</ul>
+
+		<h4>Technical details</h4>
+		
+		<ul>
+			<li> Linefy has an object oriented model with inherited classes hierarchy. </li>	
+			<li> Linefy is primarily a scripting library, but has a tools for visual editing and ready to use WYSIWYG Primitives. Basic C # scripting skills are required to utilize all features.</li>
+			<li> There is no Immediate Mode drawing for performance reasons. Instead, Linefy provides an predictable retained-mode. 
+				The retained-mode allow to fine control of memory allocation, allow to create reusable objects-pools for zero memory allocation. 
+				(see Trajectory demo scene) </li>
+			<li> Lines, Polylines, Dots, PolygonalMesh uses internal unlit shaders and cannot be replaced with custom shaders.</li>
+		</ul>
+
+		<h4>Compatibility</h4>
+			<ul>
+				<li>
+				 Unity 2017.4 or newer 
+				</li>
+			</ul>
+			
+		<h4>Installation</h4>
+			<ul> import package	</ul>
+ 
+ 		<h4>What`s new in version 1.1</h4>
+			<ul>
+				<li>
+				Text renderering using LabelsRender class and LinefyLabelsRenderer component.
+				</li>
+				
+				<li>
+				Polyline: huge performance improvement.
+				</li>
+				
+				<li>
+				DotsAtlas: 1) added options for use as a bitmap font, 2) adjustable preview area appearance which drawn with Linefy itself. .
+				</li>
+				
+				<li>
+				Dots: 1) added non quad Dot support 2) added dot local offset 3) Pixel Perfect mode 
+				</li>
+				
+				<li>
+				Added three additional algorithms for calculating the elements width . An early algorithm introduced in 1.0 is now is called PixielBillboard.
+				</li>
+				
+				<li>
+				Now used quadrilateral UV interpolation to Lines and Polyline that projects texture and colors without distortion.
+				</li>
+				
+				<li>
+				Vector3Array handle. An editor class to mass manipulate array of positions in SceneView.
+				</li>
+				
+				<li>
+				Added EditablePolyline, EditableLine, EditableDots components that serialize polyline, lines and points, respectively, and allow you to edit their position in the Scene view mode.
+				</li>
+				
+				<li>
+				Added ready to use WYSIWYG primitives.
+				</li>
+				
+				<li>
+				Advansed serialization for Lines,Polyline, Dots. Now each class has its own serialized representation, which can be stored in a MonoBehaviour or ScriptableObject object. It can also be used to display all the properties of the object in the inspector. 
+				</li>
+				
+				<li>
+				Added ZTest property
+				</li>
+				
+				<li>
+				Now drawing in OnDrawGizmos() OnDrawGizmosSelected() is supported.
+				</li>
+				
+				<li>
+				Now drawing in Editor.OnInspectorGUI() EditorWindow.OnGUI() is supported.
+				</li>
+				
+				<li>
+				Remastered Demo scenes and Documentation 
+				</li>
+				
+				<li>
+				Tested with Unity 2019, 2020, 2020  
+				</li>
+				
+				
+			</ul>
+ 
+ 	<hr>
+	
+ 	<h3 id="HowToDraw">  How to draw  </h3>
+	<p>Linefy provides two drawing methods. </p>
+	<ul>
+		<li> using MonoBehaviour components: Primitives, LabelRenderer. They acts similar to built in Renderer components. </li>
+		<li> fully scripted method for drawing objects inherited from LinefyEntity</li>
+	</ul>
+	<p>	There are different scripted drawing methods for each Unity callback.
+		</p>
+	<h4 id="DrawRuntime">  Runtime  </h4>
+	<p>Use <a href=#LinefyEntityDraw>LinefyEntity.Draw</a> method inside 
+		<a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>Update</a> 
+		or 
+		<a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>LateUpdate</a> 
+		every frame which object should displayed.
+	</p>
+ 
+ 
+ 
+	<hr>
+	
+		<h3 id="LinefyEntity">  LinefyEntity:   </h3>
+		<p> An base class for all drawable objects</p>
+		<div class="method" id="LinefyEntityDraw">
+			<strong>Draw(<em><b>Matrix4x4</b> matrix, <b>Camera</b> camera, <b>int</b> layer</em>) </strong> 
+					&NonBreakingSpace;  Actually sends objects to render. Use inside <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>Update</a> or <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>LateUpdate</a>  only. 
+			<ul>
+				<li> <em>matrix</em> - world space matrix. To calculate the screen space matrix of a specific camera, use the NearClipPlaneMatrix  </li>
+				<li> <em>camera</em> - if  <i>null</i>  , the mesh will be drawn in all cameras. Otherwise it will be rendered in the given camera only. </li>
+				<li> <em>layer</em> - layer to use.
+			</ul>
+		</div>
+		
+		<div class="method" id="LinefyEntityDrawNow">
+			<strong>DrawNow(<em><b>Matrix4x4</b> matrix</em>) </strong> 
+				 &NonBreakingSpace;  Use inside <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmos.html>OnDrawGizmos</a> or <a href=https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html>OnDrawGizmosSelected</a>  only. 
+			<ul>
+				<li> <em>matrix</em> 
+				  - An world space matrix. To calculate the screen space matrix of a specific camera, use the NearClipPlaneMatrix  </li>
+			</ul>
+		</div>
+		
+		<div class="method" id="LinefyEntityDispose">
+			<strong>Dispose()</strong> 
+			    &NonBreakingSpace; Destroys all internal unmanaged Objects. The main purpose is to use it in the editor scripts; in Game mode, objects are deleted automatically when a new level is loaded.
+ 		</div>
+	
+		<div class="method" id="LinefyEntityDisposed">
+			<strong>disposed</strong> 
+			 &NonBreakingSpace; Returns true when the LinefyEntity is disposed. You should not call methods on a disposed LinefyEntity.
+ 		</div>
+	<hr>
+		
+		<h3 id="NearClipPlaneMatrix"> <img src=" near-clip-plane-matrix-icon.xpng" >  NearClipPlaneMatrix   </h3>
+		
+		
+		<h3 id="Lines"> <img src="lines-icon.xpng" >  Lines: <a href="#LinesBase">LinesBase</a>   </h3>
+ 		<p>   Encapsulates an array of <a href="#Line">Line</a>  structures. You can set the initial count of lines in constructor or change it using the <em>count</em> property.  </p>
+		
+
+<ul>	
+	<li>use <em>this[int]</em> indexer to get/set individual line
+ 
+		<details>
+		<summary> example </summary>
+		<pre >
+using UnityEngine;
+using Linefy;
+  
+ namespace LinefyDemo{
+	public class LinefyDemo_QuickStart_CreateLines : MonoBehaviour {
+		Lines lines;
+
+		void Start(){
+			//create Lines instance with capacity 2
+			lines = new Lines(2);
+			
+			//assign lines attributes
+			lines[0] = new Line(Vector3.zero, new Vector3(1,1,0), Color.red, Color.yellow, 20, 20);
+			lines[1] = new Line(Vector3.up, Vector3.right, Color.green, Color.cyan, 20, 20);
+		}
+
+		private void Update() {
+			 //actually draw a lines
+			 lines.Draw();
+		}
+	}
+}
+		</pre>
+		<span><p>result:</p></span>
+		 <img src="lines-snippet-0.xpng" >  
+		</details>
+	</li>
+	
+	
+	<li>use <em>SetColor()</em>, <em>SetPosition()</em>, <em>SetWidth()</em> methods to set individual line attributes
+		<details>
+		<summary> example </summary>
+		<pre >
+using UnityEngine;
+using Linefy;
+
+ namespace LinefyDemo{
+	public class LinefyDemo_QuickStart_AssignLinesAttributes : MonoBehaviour {
+		Lines lines;
+	 
+		void Start() {
+			if (lines == null) {
+				//create Lines instance with capacity 2
+				lines = new Lines(2);
+				
+				//assign Lines properties
+				lines.transparent = true;
+				lines.feather = 3;
+				lines.widthMultiplier = 20;
+				
+				//set lines position, color, width
+				lines.SetPosition(0, Vector3.zero, Vector3.up);
+				lines.SetPosition(1, Vector3.right, new Vector3(1,1,0));
+				lines.SetColor(0, Color.yellow, Color.red);
+				lines.SetColor(1, Color.black, Color.white);
+				lines.SetWidth(0, 1, 2);
+				lines.SetWidth(1, 2, 1);
+			}
+		}
+		
+		void Update () {
+			 lines.Draw(transform.localToWorldMatrix);
+		}
+	}
+ }
+
+		</pre>
+		<span><p>result:</p></span>
+		 <img src="lines-snippet-1.xpng" >  
+		</details>
+	</li>
+	
+	<li>to set texture coordinates use <em> SetTextureOffset()</em> 
+		<details>
+		<summary> example </summary>
+		<pre >
+using UnityEngine;
+using Linefy;
+
+namespace LinefyDemo{
+	public class LinefyDemo_QuickStart_SetLinesTextureOffset : MonoBehaviour {
+	 
+		Lines lines;
+		public Texture2D texture;
+
+		void Start() {
+			lines = new Lines(2);
+			lines.widthMultiplier = 40;
+			lines.texture = texture;
+			lines[0] = new Line(Vector3.zero, Vector3.up );
+			lines[1] = new Line(Vector3.right, new Vector3(1,1,0) );
+			//set first line texture coordinates from zero to half of texture width
+			lines.SetTextureOffset(0, 0, 0.5f);
+			//set second line texture coordinates from half to full of texture width
+			lines.SetTextureOffset(1, 0.5f, 1f);
+		}
+		
+		void Update(){
+			lines.Draw(transform.localToWorldMatrix);
+		}
+	}
+}
+		</pre>
+		<span><p>result:</p></span>
+		 <img src="lines-snippet-2.xpng" >  
+		</details>
+	</li>
+</ul>	
+		
+
+ 
+	</div>
+		
+
+		
+	</body>
+</html>

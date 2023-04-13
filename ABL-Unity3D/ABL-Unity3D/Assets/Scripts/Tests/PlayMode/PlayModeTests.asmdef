@@ -1,0 +1,29 @@
+{
+  "name": "PlayModeTests",
+  "rootNamespace": "",
+  "references": [
+    "GUID:27619889b8ba8c24980f49ee34dbb44a",
+    "GUID:4ef168aab4ddbbf49b1430c4329c17d3",
+    "GUID:733d89a23b1c2b849a9be6cacbf90dd3",
+    "GUID:6172737ba31e460d995c21c5fd32a9b0",
+    "GUID:47b16c9b844640bcb8626068ec028aac",
+    "GUID:502779a7f4f95df4d8a377f8a18dd45d",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+    "GUID:db51b5023d54d7244aaa38681f520b1b"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll",
+    "Sirenix.Serialization.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e62e3fbeea487545a1dd23fb70ff0de, type: 3}
+  m_Name: Numbers
+  m_EditorClassIdentifier: 
+  texture: {fileID: 2800000, guid: eaea3530348129b4b9b013c896124b9b, type: 3}
+  xCount: 4
+  yCount: 4
+  rectPixelSize: {x: 128, y: 128}
+  statisticString: 16 rects  128x128 pixels
+  modificationHash: 2123335837
+  fontSettingsHash: -400699316
+  flipVertical: 0
+  apperance:
+    backgroundBrightness: 0.53
+    labelSize: 1
+    labelsColor: {r: 0, g: 1, b: 0.2390244, a: 1}
+  rects:
+  - v0: {x: 0, y: 0.75}
+    v1: {x: 0, y: 1}
+    v2: {x: 0.25, y: 1}
+    v3: {x: 0.25, y: 0.75}
+    bounds:
+      x: 37
+      y: 25
+      width: 52
+      height: 82
+  - v0: {x: 0.25, y: 0.75}
+    v1: {x: 0.25, y: 1}
+    v2: {x: 0.5, y: 1}
+    v3: {x: 0.5, y: 0.75}
+    bounds:
+      x: 42
+      y: 25
+      width: 36
+      height: 81
+  - v0: {x: 0.5, y: 0.75}
+    v1: {x: 0.5, y: 1}
+    v2: {x: 0.75, y: 1}
+    v3: {x: 0.75, y: 0.75}
+    bounds:
+      x: 32
+      y: 25
+      width: 54
+      height: 81
+  - v0: {x: 0.75, y: 0.75}
+    v1: {x: 0.75, y: 1}
+    v2: {x: 1, y: 1}
+    v3: {x: 1, y: 0.75}
+    bounds:
+      x: 35
+      y: 24
+      width: 54
+      height: 82
+  - v0: {x: 0, y: 0.5}
+    v1: {x: 0, y: 0.75}
+    v2: {x: 0.25, y: 0.75}
+    v3: {x: 0.25, y: 0.5}
+    bounds:
+      x: 34
+      y: 26
+      width: 58
+      height: 80
+  - v0: {x: 0.25, y: 0.5}
+    v1: {x: 0.25, y: 0.75}
+    v2: {x: 0.5, y: 0.75}
+    v3: {x: 0.5, y: 0.5}
+    bounds:
+      x: 35
+      y: 26
+      width: 55
+      height: 81
+  - v0: {x: 0.5, y: 0.5}
+    v1: {x: 0.5, y: 0.75}
+    v2: {x: 0.75, y: 0.75}
+    v3: {x: 0.75, y: 0.5}
+    bounds:
+      x: 34
+      y: 25
+      width: 54
+      height: 82
+  - v0: {x: 0.75, y: 0.5}
+    v1: {x: 0.75, y: 0.75}
+    v2: {x: 1, y: 0.75}
+    v3: {x: 1, y: 0.5}
+    bounds:
+      x: 42
+      y: 25
+      width: 53
+      height: 80
+  - v0: {x: 0, y: 0.25}
+    v1: {x: 0, y: 0.5}
+    v2: {x: 0.25, y: 0.5}
+    v3: {x: 0.25, y: 0.25}
+    bounds:
+      x: 41
+      y: 24
+      width: 54
+      height: 82
+  - v0: {x: 0.25, y: 0.25}
+    v1: {x: 0.25, y: 0.5}
+    v2: {x: 0.5, y: 0.5}
+    v3: {x: 0.5, y: 0.25}
+    bounds:
+      x: 38
+      y: 24
+      width: 55
+      height: 82
+  - v0: {x: 0.5, y: 0.25}
+    v1: {x: 0.5, y: 0.5}
+    v2: {x: 0.75, y: 0.5}
+    v3: {x: 0.75, y: 0.25}
+    bounds:
+      x: 39
+      y: 38
+      width: 56
+      height: 56
+  - v0: {x: 0.75, y: 0.25}
+    v1: {x: 0.75, y: 0.5}
+    v2: {x: 1, y: 0.5}
+    v3: {x: 1, y: 0.25}
+    bounds:
+      x: 38
+      y: 48
+      width: 31
+      height: 14
+  - v0: {x: 0, y: 0}
+    v1: {x: 0, y: 0.25}
+    v2: {x: 0.25, y: 0.25}
+    v3: {x: 0.25, y: 0}
+    bounds:
+      x: 39
+      y: 68
+      width: 40
+      height: 37
+  - v0: {x: 0.25, y: 0}
+    v1: {x: 0.25, y: 0.25}
+    v2: {x: 0.5, y: 0.25}
+    v3: {x: 0.5, y: 0}
+    bounds:
+      x: 45
+      y: 28
+      width: 31
+      height: 81
+  - v0: {x: 0.5, y: 0}
+    v1: {x: 0.5, y: 0.25}
+    v2: {x: 0.75, y: 0.25}
+    v3: {x: 0.75, y: 0}
+    bounds:
+      x: 37
+      y: 41
+      width: 56
+      height: 38
+  - v0: {x: 0.75, y: 0}
+    v1: {x: 0.75, y: 0.25}
+    v2: {x: 1, y: 0.25}
+    v3: {x: 1, y: 0}
+    bounds:
+      x: 17
+      y: 21
+      width: 90
+      height: 85
+  fontSettingsFoldout: 1
+  isFontAtlas: 1
+  whitespaceWidth: 16
+  horizontalSpacing: 14
+  monowidth: 0
+  enableRemapping: 1
+  resetIndexOffset: 48
+  remappingIndexTable: 300000003100000032000000330000003400000035000000360000003700000038000000390000002b0000002d0000002e0000002f0000003d00000025000000
+  background9SliseIndices:
+    topLeft: 0
+    top: 1
+    topRight: 2
+    left: 8
+    center: 9
+    right: 10
+    bottomLeft: 16
+    bottom: 17
+    bottomRight: 18

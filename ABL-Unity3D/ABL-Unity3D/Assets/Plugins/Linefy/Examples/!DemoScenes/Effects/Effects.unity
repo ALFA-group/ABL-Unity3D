@@ -1,0 +1,3878 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cd3a3909ac4e40e468d28c94e4d8b8a0, type: 2}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &113250129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113250132}
+  - component: {fileID: 113250131}
+  - component: {fileID: 113250130}
+  - component: {fileID: 113250133}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &113250130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113250129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdddeb5e4d6aa6f4ebc950819e758d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gui:
+    e00: 0.00061896717
+    e01: 0
+    e02: -0.64555305
+    e03: -19.88927
+    e10: 0
+    e11: -0.00030823686
+    e12: -0.38339198
+    e13: 10.822266
+    e20: 0
+    e21: -0.00053675607
+    e22: 0.6605088
+    e23: -4.693798
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  screen:
+    e00: 0.0006189652
+    e01: 0
+    e02: -0.6455537
+    e03: -19.88927
+    e10: 0
+    e11: 0.00030823686
+    e12: -0.76371276
+    e13: 10.645954
+    e20: 0
+    e21: 0.00053675607
+    e22: -0.0017732475
+    e23: -5.0008225
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  cameraPixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 967
+    height: 572
+  offset: 0.01
+  _parentCamera: {fileID: 113250131}
+--- !u!20 &113250131
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113250129}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &113250132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113250129}
+  m_LocalRotation: {x: 0.50100493, y: -0, z: -0, w: 0.8654444}
+  m_LocalPosition: {x: -19.59, y: 11, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 60.133003, y: 0, z: 0}
+--- !u!95 &113250133
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113250129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78280225b2ceb144285a659fb1264318, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &565520427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565520428}
+  - component: {fileID: 565520429}
+  - component: {fileID: 565520430}
+  m_Layer: 0
+  m_Name: T0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565520428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565520427}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: -20, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565520429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565520427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.7253394, a: 1}
+    texture: {fileID: 2800000, guid: e05239a6321f7c54e8ace2f3746f480f, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1
+    widthMode: 3
+    feather: 0
+    textureScale: 6
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 1
+  angleOffsetSpeed: 0
+--- !u!114 &565520430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565520427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 2.44
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.7253394, a: 1}
+    texture: {fileID: 2800000, guid: bad1d0f6e9be5f24996296fb6ecb42ed, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.97
+    widthMode: 3
+    feather: 0
+    textureScale: 10
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 2
+  angleOffsetSpeed: 0
+--- !u!1 &777617495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777617498}
+  - component: {fileID: 777617497}
+  - component: {fileID: 777617496}
+  m_Layer: 0
+  m_Name: T6 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &777617496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777617495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.2
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.45844078, a: 1}
+    texture: {fileID: 2800000, guid: e05239a6321f7c54e8ace2f3746f480f, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.67
+    widthMode: 3
+    feather: 0
+    textureScale: 12
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: -100
+--- !u!114 &777617497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777617495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 86
+  radius: 2.5
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.45844078, a: 1}
+    texture: {fileID: 2800000, guid: 0d0a200bc212bf040a4144e3a05b6544, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1
+    widthMode: 3
+    feather: 0
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 8.27
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: -70
+--- !u!4 &777617498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777617495}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: 12, y: 0, z: 8.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1154609647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154609648}
+  - component: {fileID: 1154609650}
+  - component: {fileID: 1154609649}
+  m_Layer: 0
+  m_Name: T2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1154609648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154609647}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: -12, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1154609649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154609647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.1
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0, g: 0.85723424, b: 1, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.14
+    widthMode: 3
+    feather: 0.05
+    textureScale: 1
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 1.5
+  angleOffsetSpeed: 0
+--- !u!114 &1154609650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154609647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 86
+  radius: 2.73
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0, g: 0.85723424, b: 1, a: 1}
+    texture: {fileID: 2800000, guid: 3845aada43b61d948b98e50ee882034a, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.5
+    widthMode: 3
+    feather: 0.07
+    textureScale: 40
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 7
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 7
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0020450857
+      value: -0.000103756785
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5007374
+      value: 1.0005937
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9955592
+      value: 0.0025619864
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 2
+  angleOffsetSpeed: 0
+--- !u!1 &1207886116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1207886117}
+  - component: {fileID: 1207886118}
+  - component: {fileID: 1207886119}
+  m_Layer: 0
+  m_Name: T6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1207886117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207886116}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1207886118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207886116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 86
+  radius: 2.5
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.048704147, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: 0d0a200bc212bf040a4144e3a05b6544, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1
+    widthMode: 3
+    feather: 0
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 8.27
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: -80
+--- !u!114 &1207886119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207886116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.2
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.048704147, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: e05239a6321f7c54e8ace2f3746f480f, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.67
+    widthMode: 3
+    feather: 0
+    textureScale: 12
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: -100
+--- !u!1 &1295171301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295171306}
+  - component: {fileID: 1295171305}
+  - component: {fileID: 1295171304}
+  - component: {fileID: 1295171303}
+  - component: {fileID: 1295171302}
+  m_Layer: 0
+  m_Name: T3 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1295171302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295171301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 1.6
+  angle: 110.4
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.45844078, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.17
+    widthMode: 3
+    feather: 0.03
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 0
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 70
+--- !u!114 &1295171303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295171301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 1.96
+  angle: 126.29
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.45844078, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.3
+    widthMode: 3
+    feather: 0.03
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 0
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 140
+--- !u!114 &1295171304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295171301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 2.4
+  angle: 156
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.45844078, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.29
+    widthMode: 3
+    feather: 0.03
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 0
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 120
+--- !u!114 &1295171305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295171301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 2.94
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0, b: 0.45844078, a: 1}
+    texture: {fileID: 2800000, guid: bad1d0f6e9be5f24996296fb6ecb42ed, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1.1
+    widthMode: 3
+    feather: 0
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 90
+--- !u!4 &1295171306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295171301}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: -4, y: 0, z: 8.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1338328807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338328809}
+  - component: {fileID: 1338328808}
+  - component: {fileID: 1338328810}
+  m_Layer: 0
+  m_Name: T5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1338328808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338328807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 109
+  radius: 2.61
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0.8834678, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: adc6909f570030e4f83e7953c1c99c97, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1.57
+    widthMode: 3
+    feather: 0
+    textureScale: 15.27
+    textureOffset: 5.03
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 50
+--- !u!4 &1338328809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338328807}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338328810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338328807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.2
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 1, g: 0.8834678, b: 0, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.2
+    widthMode: 3
+    feather: 0.1
+    textureScale: 1
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 0
+--- !u!1 &1448924804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448924807}
+  - component: {fileID: 1448924806}
+  - component: {fileID: 1448924805}
+  m_Layer: 0
+  m_Name: T0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1448924805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448924804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 2.44
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.89986145, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: bad1d0f6e9be5f24996296fb6ecb42ed, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.97
+    widthMode: 3
+    feather: 0
+    textureScale: 10
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 30
+--- !u!114 &1448924806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448924804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.89986145, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: e05239a6321f7c54e8ace2f3746f480f, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1
+    widthMode: 3
+    feather: 0
+    textureScale: 6
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: -45
+--- !u!4 &1448924807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448924804}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: -20, y: 0, z: 8.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1736558247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736558250}
+  - component: {fileID: 1736558249}
+  - component: {fileID: 1736558248}
+  m_Layer: 0
+  m_Name: T5 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1736558248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736558247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.2
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0, g: 0.9620137, b: 1, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.2
+    widthMode: 3
+    feather: 0.1
+    textureScale: 1
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 80
+  angleOffsetSpeed: 0
+--- !u!114 &1736558249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736558247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 109
+  radius: 2.61
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0, g: 0.9620137, b: 1, a: 1}
+    texture: {fileID: 2800000, guid: adc6909f570030e4f83e7953c1c99c97, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1.57
+    widthMode: 3
+    feather: 0
+    textureScale: 15.27
+    textureOffset: 5.03
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 100
+--- !u!4 &1736558250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736558247}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: 4, y: 0, z: 8.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1855637745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855637746}
+  - component: {fileID: 1855637747}
+  - component: {fileID: 1855637748}
+  - component: {fileID: 1855637749}
+  - component: {fileID: 1855637750}
+  m_Layer: 0
+  m_Name: T3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1855637746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855637745}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855637747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855637745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 2.94
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.03184688, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: bad1d0f6e9be5f24996296fb6ecb42ed, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 1.1
+    widthMode: 3
+    feather: 0
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 3
+  angleOffsetSpeed: 0
+--- !u!114 &1855637748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855637745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 2.4
+  angle: 194
+  offsetAngle: 63.57
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.03184688, g: 1, b: 0, a: 0.45490196}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.29
+    widthMode: 3
+    feather: 0.03
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 0
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 2
+  angleOffsetSpeed: 120
+--- !u!114 &1855637749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855637745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 1.96
+  angle: 126.29
+  offsetAngle: 23.45
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.03184688, g: 1, b: 0, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.3
+    widthMode: 3
+    feather: 0.03
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 0
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 1
+  angleOffsetSpeed: 70
+--- !u!114 &1855637750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855637745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -4
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 1.6
+  angle: 110.4
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.03184688, g: 1, b: 0, a: 0.4745098}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.17
+    widthMode: 3
+    feather: 0.03
+    textureScale: 16
+    textureOffset: 0
+    isClosed: 0
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: -1
+  angleOffsetSpeed: 160
+--- !u!1 &1863268632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863268634}
+  - component: {fileID: 1863268633}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1863268633
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863268632}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1863268634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863268632}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1990666786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990666787}
+  - component: {fileID: 1990666788}
+  - component: {fileID: 1990666789}
+  m_Layer: 0
+  m_Name: T7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1990666787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990666786}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990666788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990666786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 86
+  radius: 2.76
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.89986145, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: 3845aada43b61d948b98e50ee882034a, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.2
+    widthMode: 3
+    feather: 0.07
+    textureScale: 40
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 7
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.003955841
+      value: 0.49891967
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.496979
+      value: 2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99902344
+      value: 0.50548095
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 7
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0020450857
+      value: -0.000103756785
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5007374
+      value: 1.0005937
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9955592
+      value: 0.0025619864
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 3
+  angleOffsetSpeed: 0
+--- !u!114 &1990666789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990666786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.08
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.89986145, g: 1, b: 0, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.14
+    widthMode: 3
+    feather: 0.05
+    textureScale: 1
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 0
+--- !u!1 &2033930586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033930588}
+  - component: {fileID: 2033930587}
+  m_Layer: 0
+  m_Name: grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2033930587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033930586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a387f657d20ea24a9cff3905705018a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -1
+    e10: 0
+    e11: -0.00000011920929
+    e12: -1.0000001
+    e13: 0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920929
+    e23: 4.1
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  width: 75
+  length: 25
+  widthSegments: 75
+  lengthSegments: 25
+  linePerSegment: 0
+  wireframeProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: -1
+    transparent: 1
+    colorMultiplier: {r: 1, g: 1, b: 1, a: 0.13333334}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 2
+    widthMode: 0
+    feather: 0.5
+    textureScale: 1
+    textureOffset: 0
+--- !u!4 &2033930588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033930586}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1, y: 0, z: 4.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &2137006841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137006844}
+  - component: {fileID: 2137006843}
+  - component: {fileID: 2137006842}
+  m_Layer: 0
+  m_Name: T7 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2137006842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137006841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.08
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0, g: 0.46206903, b: 1, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.14
+    widthMode: 3
+    feather: 0.05
+    textureScale: 1
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 0
+--- !u!114 &2137006843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137006841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: 20
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 86
+  radius: 2.76
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0, g: 0.46206903, b: 1, a: 1}
+    texture: {fileID: 2800000, guid: 3845aada43b61d948b98e50ee882034a, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.2
+    widthMode: 3
+    feather: 0.07
+    textureScale: 40
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 7
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.003955841
+      value: 0.49891967
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.496979
+      value: 2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99902344
+      value: 0.50548095
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 7
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0020450857
+      value: -0.000103756785
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5007374
+      value: 1.0005937
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9955592
+      value: 0.0025619864
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 3
+  angleOffsetSpeed: 0
+--- !u!4 &2137006844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137006841}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: 20, y: 0, z: 8.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2147009451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147009454}
+  - component: {fileID: 2147009453}
+  - component: {fileID: 2147009452}
+  m_Layer: 0
+  m_Name: T2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2147009452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147009451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 64
+  radius: 3.1
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.048704147, g: 1, b: 0, a: 1}
+    texture: {fileID: 0}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.14
+    widthMode: 3
+    feather: 0.05
+    textureScale: 1
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 1
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 1
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 0
+  angleOffsetSpeed: 0
+--- !u!114 &2147009453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147009451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ae15ce018a901468b258df7a6b4a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedWorldMatrix:
+    e00: -0.6500808
+    e01: 0.75986516
+    e02: 0
+    e03: -12
+    e10: 0
+    e11: 0
+    e12: 1
+    e13: 0
+    e20: 0.75986516
+    e21: 0.6500808
+    e22: 0
+    e23: 8.26
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  segmentsCount: 86
+  radius: 2.73
+  angle: 360
+  offsetAngle: 0
+  polylineProperties:
+    name: 
+    boundsSize: 1000
+    renderOrder: 0
+    transparent: 1
+    colorMultiplier: {r: 0.048704147, g: 1, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: 3845aada43b61d948b98e50ee882034a, type: 3}
+    viewOffset: 0
+    depthOffset: 0
+    fadeAlphaDistance:
+      from: 10000
+      to: 10001
+    zTest: 4
+    capacityChangeStep: 4
+    widthMultiplier: 0.5
+    widthMode: 3
+    feather: 0.07
+    textureScale: 40
+    textureOffset: 0
+    isClosed: 1
+    lastVertexTextureOffset: 1
+  widthCurveTiling: 7
+  widthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  transparencyCurveTiling: 7
+  transparencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0020450857
+      value: -0.000103756785
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5007374
+      value: 1.0005937
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9955592
+      value: 0.0025619864
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  textureOffsetSpeed: 3
+  angleOffsetSpeed: 0
+--- !u!4 &2147009454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147009451}
+  m_LocalRotation: {x: -0.29576987, y: -0.64227736, z: -0.64227736, w: 0.29576987}
+  m_LocalPosition: {x: -12, y: 0, z: 8.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7410235776953158523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7410235776953158525}
+  - component: {fileID: 7410235776953158524}
+  m_Layer: 0
+  m_Name: SceneController  Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7410235776953158524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7410235776953158523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c34d9f3544c154db6ec07e2b7c0758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 7
+  descriptionText: Make an custom Effects
+  descriptionTop: 0
+  descriptionFont: {fileID: 11400000, guid: 90c9c17e8fb2d7d47b226c9f25d2d7ec, type: 2}
+  timer: 2.04
+  ncpm: {fileID: 113250130}
+  transitionFadeValue: 0
+  skyboxMaterial: {fileID: 2100000, guid: cd3a3909ac4e40e468d28c94e4d8b8a0, type: 2}
+  backgroundColorA: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
+  backgroundColorB: {r: 0.5283019, g: 0.5208259, b: 0.5208259, a: 0}
+--- !u!4 &7410235776953158525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7410235776953158523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -16.2, z: 31.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

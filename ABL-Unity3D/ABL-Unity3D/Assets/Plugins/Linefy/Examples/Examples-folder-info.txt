@@ -1,0 +1,4 @@
+- This folder contains a variety of examples of using Linefy. 
+- Demo scenes are located in the !DemoScenes folder.
+- All scripts from the examples nested in the LinefyExample namespace.
+- The Linefy does not depend on this folder, so you can delete it..

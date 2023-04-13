@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Gold"
+  given-names: "Robert"
+  orcid: "https://orcid.org/0000-0001-8257-4187"
+- family-names: "Haydn Grant"
+  given-names: "Andrew"
+  orcid: "https://orcid.org/0000-0001-6039-7669"
+- family-names: "Hemberg"
+  given-names: "Erik"
+  orcid: "https://orcid.org/0000-0001-8905-1186"
+- family-names: "O'Reilly"
+  given-names: "Una-May"
+  orcid: "https://orcid.org/0000-0001-6923-8445"
+- family-names: "Gunaratne"
+  given-names: "Chathika"
+  orcid: "https://orcid.org/0000-0002-2508-8745"
+title: "ABL-Unity3D"
+version: 1.0.0
+doi: 10.1007/978-981-19-8460-0_3
+date-released: 2023-01-16
+url: "https://github.com/ALFA-group/ABL-Unity3D"

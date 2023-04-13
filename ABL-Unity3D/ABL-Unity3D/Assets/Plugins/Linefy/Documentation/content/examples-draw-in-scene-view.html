@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Draw in Scene view example </title>
+  <meta name="description" content="Linefy Documentation - Draw in Scene view example ">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../flavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../flavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../flavicon/favicon-16x16.png">
+  <link rel="manifest" href="../flavicon//site.webmanifest">
+  <link rel="mask-icon" href="../flavicon//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+ 
+<body>
+<div>
+	<h4 id="Classes"> <a href=../linefy-documentation.html>Linefy Documentation</a> / Draw in Scene view example   </h4>
+<div class="codePre">
+
+<pre class="csharp" style="font-family:monospace;"><span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">UnityEditor</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">UnityEngine</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">Linefy</span><span style="color: #008000;">;</span>
+<span style="color: #0600FF; font-weight: bold;">using</span> <span style="color: #008080;">Linefy.Primitives</span><span style="color: #008000;">;</span>
+&nbsp;
+<span style="color: #0600FF; font-weight: bold;">namespace</span> LinefyExamples <span style="color: #008000;">&#123;</span>
+    <span style="color: #008000;">&#91;</span>CustomEditor<span style="color: #008000;">&#40;</span><span style="color: #008000;">typeof</span><span style="color: #008000;">&#40;</span>DrawInSceneViewExample<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#93;</span>
+    <span style="color: #0600FF; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> DrawInSceneViewExampleEditor <span style="color: #008000;">:</span> Editor <span style="color: #008000;">&#123;</span>
+        CircularPolyline screenMouseCircle<span style="color: #008000;">;</span>
+&nbsp;
+        <span style="color: #6666cc; font-weight: bold;">void</span> OnEnable<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            screenMouseCircle <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> CircularPolyline<span style="color: #008000;">&#40;</span><span style="color: #FF0000;">6</span>, <span style="color: #FF0000;">50</span>, Color<span style="color: #008000;">.</span><span style="color: #0000FF;">green</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+&nbsp;
+        <span style="color: #0600FF; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnSceneGUI<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span>
+            OnSceneGUIGraphics<span style="color: #008000;">.</span><span style="color: #0000FF;">DrawGUIspace</span><span style="color: #008000;">&#40;</span>screenMouseCircle, Matrix4x4<span style="color: #008000;">.</span><span style="color: #0000FF;">Translate</span><span style="color: #008000;">&#40;</span><span style="color: #0600FF; font-weight: bold;">Event</span><span style="color: #008000;">.</span><span style="color: #0000FF;">current</span><span style="color: #008000;">.</span><span style="color: #0000FF;">mousePosition</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span>
+        <span style="color: #008000;">&#125;</span>
+    <span style="color: #008000;">&#125;</span>
+<span style="color: #008000;">&#125;</span>	</pre>
+
+</div>
+
+	<footer>
+		 <a href=https://polyflow.xyz/> Polyflow Studio</a> © 2021 
+	</footer>
+</div>
+</body>
+</html>
